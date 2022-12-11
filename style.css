@@ -184,15 +184,16 @@ form {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         
         margin: auto;
-        width: 400px;
+        width: 350px;
+        padding: 10px;
         max-width: 100%;	
         border: 1px solid #0000000A;
-        border-radius: 5px; 
+        border-radius: 15px; 
         background-color: var(--minclr); // var(--sekclr);
     }
 
     .input {
-        width: 88%;
+        width: 86%;
     }
 }
 
