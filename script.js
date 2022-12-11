@@ -10,8 +10,8 @@ ding.volume = 0.3;
 // todo load
 
 let form = document.getElementsByClassName('form')[0];
-let input = document.getElementsByClassName('input')[0];; // document.get
-let todoUL = document.getElementsByClassName('todos')[0];;
+let input = document.getElementsByClassName('input')[0]; // document.get
+let todoUL = document.getElementsByClassName('todos')[0];
 
 let todos = JSON.parse(localStorage.getItem('todos'));
 
@@ -37,6 +37,7 @@ function addTodo(todo) {
 
     if (todoText) {
         let TodoEl = document.createElement('li'); 
+        TodoEl.classList.add('primlist');
 
         if(todo && todo.completed) {
             TodoEl.classList.add('completed');
@@ -73,7 +74,7 @@ function addTodo(todo) {
 
 
 function updateLS() {
-    let todosEl = document.querySelectorAll('li');
+    let todosEl = document.querySelectorAll('.primlist');
 
     let todos = [];
 
@@ -155,3 +156,4 @@ function confirmation() {
         clearthis();
     }
 }
+

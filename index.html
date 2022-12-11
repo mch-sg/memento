@@ -62,26 +62,26 @@
     </form>
 
     <!--    TOMORROW     -->
-    <!-- <div class="container">
+    <div class="container">
         <div class="todow">
-            <h2>tomorrow's tasks</h2>
-            <ul id="todo-list"></ul>
+            <a style="color: white;cursor: default;" id="date" contenteditable>list name...</a>
+            <a onclick="confirmit()">clear</a>
+            </div> 
         </div>
     </div>
 
-    <form id="form" class="form" style="margin-bottom: 3rem;">
+    <form id="form1" class="form" style="margin-bottom: 3rem;">
         <input 
             type="text" 
-            id="input2" 
+            id="input1" 
             class="input" 
             placeholder="add a task..." 
             autocomplete="off"
             
         />
-
-        <ul class="todos" id="todos2" draggable="true" ondragover="allowDrop(event)" ondrop="drop(event)" ondragstart="drag(event)">
+        <ul class="todos" id="todos1" draggable="true" ondragover="allowDrop(event)" ondrop="drop(event)" ondragstart="drag(event)">
         </ul>
-    </form> -->
+    </form>
 
     <small>
         Left click to toggle complete. 
@@ -92,4 +92,5 @@
 
 </body>
 <script src="script.js"></script>
+<script src="newlist.js"></script>
 </html>
