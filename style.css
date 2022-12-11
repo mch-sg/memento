@@ -195,6 +195,10 @@ form {
     .input {
         width: 86%;
     }
+
+    .container {
+        margin-top: 50px;
+    }
 }
 
 @media only screen 
