@@ -3,7 +3,9 @@
 <head>
     <title>memento - todo list</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.13.2/"></script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,27 +27,69 @@
 	<meta property="og:image" content="https://freight.cargo.site/i/6e5dafabf47bdc5713a164189bbf90d2e8450df8cc77849ab9dada44288beff9/ssww.png">
 	<meta property="og:type" content="website">
 
-    <link href="https://i.imgur.com/93xMaAY.png" rel="shortcut icon">
+    <!-- <link href="https://i.imgur.com/93xMaAY.png" rel="shortcut icon"> -->
 </head>
-<body>
+<body ondragstart="return false;" ondrop="return false;">
 
 <header>
     <h1>memento</h1>
-    <a href="https://github.com/mch-sg" target="_blank">by Magnus Hvidtfeldt</a>
+    <p>by <a href="https://github.com/mch-sg" target="_blank">Magnus Hvidtfeldt</a>
+    <p>rapid to do list app on-the-go.<br> suggestions? <a href="https://twitter.com/hvidtfldt" target="_blank">tweet me.</a></p>
 </header>
 
 <main>
+    <!--    TODAY     -->
     <div class="container">
-        <div class="todo">
-            <h2>todo</h2>
-            <ul id="todo-list"></ul>
-        </div>
-        <div class="done">
-            <h2>done</h2>
-            <ul id="done-list"></ul>
+        <div class="todow">
+            <a style="color: white;cursor: default;" id="date">today's tasks</a>
+            <a onclick="confirmation()">clear</a>
+            </div> 
         </div>
     </div>
+
+    <form id="form" class="form" style="margin-bottom: 3rem;">
+        <input 
+            type="text" 
+            id="input" 
+            class="input" 
+            placeholder="add a task..." 
+            autocomplete="off"
+        />
+
+        <ul class="todos" id="todos" draggable="false">
+            
+        </ul>
+    </form>
+
+    <!--    TOMORROW     -->
+    <!-- <div class="container">
+        <div class="todow">
+            <h2>tomorrow's tasks</h2>
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+
+    <form id="form" class="form" style="margin-bottom: 3rem;">
+        <input 
+            type="text" 
+            id="input2" 
+            class="input" 
+            placeholder="add a task..." 
+            autocomplete="off"
+            
+        />
+
+        <ul class="todos" id="todos2" draggable="true" ondragover="allowDrop(event)" ondrop="drop(event)" ondragstart="drag(event)">
+        </ul>
+    </form> -->
+
+    <small>
+        Left click to toggle complete. 
+        <br />
+        Right click to delete the todo.
+    </small>
 </main>
 
 </body>
+<script src="script.js"></script>
 </html>
