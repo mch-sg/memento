@@ -2,13 +2,13 @@
 
 :root {
     --add: #f7d1cd;
-    --sekclr: #F5F5F5DE;
+    --sekclr: #DDDDDDDE;
     --hclr: #b392ac;
-    --minclr: #141618; // #141618 // #d1b3c4
+    --minclr: #0B0B0D; // #141618 // #d1b3c4 // #0B0B0D // #101113
     --primclr: #735d78; // #e0d2ea
     --bclr: #0000006F;
     --b: #000000;
-    --dim: #FFFFFF6F; // #00000041
+    --dim: #FFFFFF44; // #00000041
 }
 
 * {
@@ -16,6 +16,12 @@
     /* padding: 5px; */
     margin-bottom: 5px;
     text-decoration: none;
+}
+
+hr {
+    border: 1px solid #FFFFFF0C;
+    width: 100%;
+    margin-bottom: 75px;
 }
 
 /*  PRIMARY  */ 
@@ -50,7 +56,7 @@ h2, a, p {
     color: var(--sekclr); // #0000006F
 }
 
-p a {
+p a  {
     color: var(--add);
     transition: 0.3s;
     cursor: pointer;
@@ -62,17 +68,21 @@ p a:hover {
 }
 
 div a {
-    color: var(--add);
     font-size: 1rem;
+}
+
+a {
+    color: var(--add);
     transition: 0.3s;
     cursor: pointer;
 }
-div a:hover {
+a:hover {
     color: #A47CAC;
     opacity: 1;
 }
 
 small {
+    text-align: center;
     margin-top: 3rem;
     font-weight: 500;
     font-size: 12px;
@@ -91,16 +101,12 @@ header {
 /*  CLASS ASSETS  */ 
 
 .container {
-    margin-top: 100px;
+    margin-top: 75px;
     color: var(--bclr);
 }
 
 
 form {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     
@@ -171,97 +177,25 @@ form {
 }
  
 
-/*  SCREEN ADJUSTMENTS   */
 
-@media only screen 
-  and (max-width: 812px) {
-    form {
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; */
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        
-        margin: auto;
-        width: 350px;
-        padding: 10px;
-        max-width: 100%;	
-        border: 1px solid #0000000A;
-        border-radius: 10px; 
-        background-color: var(--minclr); // var(--sekclr);
-    }
 
-    .input {
-        width: 86%;
-    }
-
-    .container {
-        margin-top: 50px;
-    }
+#form1 {
+    /* visibility: hidden; */
+    display: none;
+} #tmr {
+    /* visibility: hidden; */
+    display: none;
 }
 
-@media only screen 
-  and (min-width: 2000px) {
-    form {
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; */
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        
-        margin: auto;
-        width: 600px;
-        max-width: 100%;	
-        border: 1px solid #0000000A;
-        border-radius: 10px; 
-        background-color: var(--minclr); // var(--sekclr);
-    }
-
-    .input {
-        width: 92%;
-    }
+#form2 {
+    display: none;
+} #tmr1 {
+    display: none;
 }
 
-
-
-/*  EXTRA ADD-ONS */
-
-::-moz-selection { /* Code for Firefox */
-    color: var(--hclr);
-    background: var(--add);
-}
-  
-::selection {
-    color: var(--add);
-    background: #3A3152;
+.newli {
+    /* visibility: hidden; */
+    display: none;
 }
 
-body {
-    -user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
-
-.dia {
-    visibility: hidden;
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 200;
-    color: white;
-    line-height: 2vh;
-    top:0%;
-    left:0%;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-
-
-/*  SCROLLBAR   */
 
