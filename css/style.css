@@ -134,6 +134,8 @@ form {
     color: var(--dim);
 }
 
+
+
 .input:active, .input:focus {
     outline: none;
     border-radius: 10px 10px 0 0;
@@ -151,13 +153,20 @@ form {
 }
 
 .todos li {
-    transition: 0.3s;
+    transition: 0.2s;
     color: var(--sekclr);
     text-align: left;
     border-top: 1px solid #FFFFFF0A;
     background-color: var(--minclr);
     font-size: 1.25rem;
     padding: 1rem 1.5rem;
+}
+
+.todos li:hover {
+    color: #A47CAC;
+    background-color: #101113;
+    transform: scale(0.99);
+    border-radius: 10px;
 }
 
 
