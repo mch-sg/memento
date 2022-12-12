@@ -1,5 +1,7 @@
 /*  ROOT  */ 
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Raleway:wght@300;400;500;600&display=swap');
+
 :root {
     --add: #f7d1cd;
     --sekclr: #DDDDDDDE;
@@ -12,8 +14,7 @@
 }
 
 * {
-    font-family: sans-serif;
-    /* padding: 5px; */
+    font-family: 'Raleway', 'Inter', sans-serif;
     margin-bottom: 5px;
     text-decoration: none;
 }
@@ -41,8 +42,7 @@ h1 {
     color: #ffffff;
     text-align: center;
     align-items: center;
-    font-family: sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 65px;
     color: var(--hclr);
     padding-top: 5px;
