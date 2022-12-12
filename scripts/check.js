@@ -61,10 +61,13 @@ function deletelist() {
     var returcofirm = confirm("Are you sure you want to delete this list? This will also remove your todos.");
 
     if (returcofirm == true) {
-        document.getElementById('newli2').style.display = 'none';
         document.getElementById('newli').style.display = 'block';
         document.getElementById('form1').style.display = 'none';
         document.getElementById('tmr').style.display = 'none';
+
+        if(!localStorage.list2) {
+            document.getElementById('newli2').style.display = 'none';
+        } 
 
 
         // TodoEl1.remove();
@@ -107,10 +110,13 @@ function deletelist1() {
     var returcofirm2 = confirm("Are you sure you want to delete this list? This will also remove your todos.");
 
     if (returcofirm2 == true) {
-        document.getElementById('newli2').style.display = 'block';
-        document.getElementById('newli').style.display = 'none';
+        document.getElementById('newli2').style.display = 'block'; 
         document.getElementById('form2').style.display = 'none';
         document.getElementById('tmr1').style.display = 'none';
+
+        if(!localStorage.list1) {
+            document.getElementById('newli2').style.display = 'none';
+        }
 
         // TodoEl1.remove();
         clearthis2();
