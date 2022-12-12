@@ -14,7 +14,6 @@
 }
 
 * {
-    font-family: 'Raleway', 'Inter', sans-serif;
     margin-bottom: 5px;
     text-decoration: none;
 }
@@ -28,6 +27,7 @@ hr {
 /*  PRIMARY  */ 
 
 body {
+    font-family: 'Raleway', 'Inter', sans-serif;
     background-color: var(--b); 
     margin: 0;
     padding: 0;
@@ -119,6 +119,7 @@ form {
 }
 
 .input {
+    font-family: 'Inter', sans-serif;
     width: 90%;
     border-radius: 15px;
     color: var(--sekclr);
@@ -142,6 +143,7 @@ form {
 }
 
 .todos {
+    font-family: 'Inter', sans-serif;
     width: 100%;
     color: white;
     margin: auto;
