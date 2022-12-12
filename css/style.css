@@ -4,7 +4,7 @@
 
 :root {
     --add: #f7d1cd;
-    --sekclr: #DDDDDDDE;
+    --sekclr: #DDDDDDBF;
     --hclr: #b392ac;
     --minclr: #0B0B0D; // #141618 // #d1b3c4 // #0B0B0D // #101113
     --primclr: #735d78; // #e0d2ea
@@ -51,14 +51,14 @@ h1 {
 h2, a, p {
     text-align: center;
     align-items: center;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 17px;
     color: var(--sekclr); // #0000006F
 }
 
 p a  {
     color: var(--add);
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
 }
 
@@ -73,7 +73,7 @@ div a {
 
 a {
     color: var(--add);
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
 }
 a:hover {
