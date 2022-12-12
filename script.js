@@ -150,10 +150,9 @@ document.getElementById("date").innerHTML = currentDate; // input the name
 // });
 
 function confirmation() {
-    var returcofir = confirm("Are you sure you want to delete all your todos?");
+    var returcofir = confirm("Are you sure you want to delete all your todos in this list?");
 
     if (returcofir == true) {
         clearthis();
     }
 }
-

@@ -4,7 +4,7 @@
     --add: #f7d1cd;
     --sekclr: #F5F5F5DE;
     --hclr: #b392ac;
-    --minclr: #101113; // #141618 // #d1b3c4
+    --minclr: #0B0B0D; // #141618 // #d1b3c4 // #0B0B0D // #101113
     --primclr: #735d78; // #e0d2ea
     --bclr: #0000006F;
     --b: #000000;
@@ -50,7 +50,7 @@ h2, a, p {
     color: var(--sekclr); // #0000006F
 }
 
-p a {
+p a  {
     color: var(--add);
     transition: 0.3s;
     cursor: pointer;
@@ -62,12 +62,15 @@ p a:hover {
 }
 
 div a {
-    color: var(--add);
     font-size: 1rem;
+}
+
+a {
+    color: var(--add);
     transition: 0.3s;
     cursor: pointer;
 }
-div a:hover {
+a:hover {
     color: #A47CAC;
     opacity: 1;
 }
@@ -253,4 +256,18 @@ body {
 ::-webkit-scrollbar-thumb:horizontal:active {
     background: rgba(95, 91, 91, 1);
 
+}
+
+
+#form1 {
+    /* visibility: hidden; */
+    display: none;
+} #tmr {
+    /* visibility: hidden; */
+    display: none;
+}
+
+.newli {
+    /* visibility: hidden; */
+    display: none;
 }

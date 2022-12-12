@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="jquery-ui-1.13.2/"></script>
+    <script rel="preload" src="check.js"></script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,11 +30,11 @@
 
     <!-- <link href="https://i.imgur.com/93xMaAY.png" rel="shortcut icon"> -->
 </head>
-<body ondragstart="return false;" ondrop="return false;">
+<body ondragstart="return false;" ondrop="return false;" onload="checklist()">
 
 <header>
     <h1>memento</h1>
-    <p>by <a href="https://github.com/mch-sg" target="_blank">Magnus Hvidtfeldt</a>
+    <p style="margin-top: 10px;">by <a href="https://github.com/mch-sg" target="_blank">Magnus Hvidtfeldt</a>
     <p>rapid to do list app on-the-go.<br> suggestions? <a href="https://twitter.com/hvidtfldt" target="_blank">tweet me.</a></p>
 </header>
 
@@ -61,16 +62,20 @@
         </ul>
     </form>
 
+    <a id="newli" class="newli" onclick="newbox()">new list<br/></a>
+
     <!--    TOMORROW     -->
+    <div class="tomorrow" id="tmr">
     <div class="container">
         <div class="todow">
-            <a style="color: white;cursor: default;" id="date" contenteditable>list name...</a>
+            <a id="nameoflist" style="color: white;cursor: default;">list name...</a>
             <a onclick="confirmit()">clear</a>
+            <a onclick="deletelist()">delete</a>
             </div> 
         </div>
     </div>
 
-    <form id="form1" class="form" style="margin-bottom: 3rem;">
+    <form id="form1" class="form form1" style="margin-bottom: 3rem;">
         <input 
             type="text" 
             id="input1" 
@@ -82,8 +87,12 @@
         <ul class="todos" id="todos1" draggable="true" ondragover="allowDrop(event)" ondrop="drop(event)" ondragstart="drag(event)">
         </ul>
     </form>
+    </div>
 
     <small>
+        <br />
+        <br />
+        <br />
         Left click to toggle complete. 
         <br />
         Right click to delete the todo.

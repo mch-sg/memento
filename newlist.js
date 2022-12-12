@@ -100,7 +100,7 @@ function clearthis1() {
 }
 
 function confirmit() {
-    var returcofir = confirm("Are you sure you want to delete all your todos?");
+    var returcofir = confirm("Are you sure you want to delete all your todos in this list?");
 
     if (returcofir == true) {
         clearthis1();
