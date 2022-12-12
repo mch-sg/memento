@@ -25,10 +25,9 @@ function checklist(){
     }
 
 
-    // CHECK IF OTHER
-    // if (!localStorage.list1 && !localStorage.list2) {
-    //     document.getElementById('newli2').style.display = 'none';
-    // }
+    if (!localStorage.list2 && localStorage.list1) {
+        document.getElementById('newli2').style.display = 'block';
+    }
 }
 
 
