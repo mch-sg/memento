@@ -1,0 +1,30 @@
+/*  SCREEN ADJUSTMENTS   */
+
+@media only screen 
+  and (max-width: 812px) {
+    form {
+        width: 350px;
+        padding: 10px;
+        max-width: 100%;	
+    }
+
+    .input {
+        width: 86%;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+}
+
+@media only screen 
+  and (min-width: 2000px) {
+    form {
+        width: 600px;
+        max-width: 100%;	
+    }
+
+    .input {
+        width: 92%;
+    }
+}
