@@ -109,6 +109,7 @@ function deletelist1() {
 
     if (returcofirm2 == true) {
         document.getElementById('newli2').style.display = 'block';
+        document.getElementById('newli').style.display = 'none';
         document.getElementById('form2').style.display = 'none';
         document.getElementById('tmr1').style.display = 'none';
 
