@@ -64,15 +64,19 @@
         </ul>
     </form>
 
+    <!-- NEW LIST 1 -->
     <a id="newli" class="newli" onclick="newbox()">new list<br/></a>
 
     <!--    LIST 2     -->
     <div class="tomorrow" id="tmr">
     <div class="container">
+        <hr>
         <div class="todow">
-            <a id="nameoflist" style="color: white;cursor: default;">list name...</a>
-            <a onclick="confirmit()">clear</a>
-            <a onclick="deletelist()">delete</a>
+            <a id="nameoflist1" style="color: white;cursor: default;">list name...</a>
+            <div>
+                <a onclick="deletelist()" style="margin-right: 25px;">delete </a>
+                <a onclick="confirmit()">clear</a>
+            </div>
             </div> 
         </div>
     </div>
@@ -91,8 +95,37 @@
     </form>
     </div>
 
+    <!-- NEW LIST 2 -->
+    <a id="newli2" class="newli" onclick="newbox1()">new list<br/></a>
 
+    <!--    LIST 3     -->
+    <div class="tomorrow" id="tmr1">
+        <div class="container">
+            <hr>
+            <div class="todow">
+                <a id="nameoflist2" style="color: white;cursor: default;">list name...</a>
+                <div>
+                    <a onclick="deletelist1()" style="margin-right: 25px;">delete </a>
+                    <a onclick="confirmit2()">clear</a>
+                </div>
+                </div> 
+            </div>
+        </div>
     
+        <form id="form2" class="form form2" style="margin-bottom: 3rem;">
+            <input 
+                type="text" 
+                id="input2" 
+                class="input" 
+                placeholder="add a task..." 
+                autocomplete="off"
+                
+            />
+            <ul class="todos" id="todos2" draggable="true" ondragover="allowDrop(event)" ondrop="drop(event)" ondragstart="drag(event)">
+            </ul>
+        </form>
+        </div>
+
     <small>
         <br />
         <br />
@@ -105,5 +138,7 @@
 
 </body>
 <script src="scripts/script.js"></script>
-<script src="scripts/newlist.js"></script>
+<script src="scripts/primary-list.js"></script>
+<script src="scripts/secondary-list.js"></script>
+<script src="scripts/tertiary-list.js"></script>
 </html>

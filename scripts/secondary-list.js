@@ -37,7 +37,7 @@ function addTodo1(todo1) {
 
     if (todoText1) { 
         let TodoEl1 = document.createElement('li'); 
-        TodoEl1.classList.add('newlist');
+        TodoEl1.classList.add('seclist');
 
         if(todo1 && todo1.completed) {
             TodoEl1.classList.add('completed');
@@ -74,7 +74,7 @@ function addTodo1(todo1) {
 
 
 function updateLS1() {
-    let todosEl1 = document.querySelectorAll('.newlist');
+    let todosEl1 = document.querySelectorAll('.seclist');
 
     let todos1 = [];
 

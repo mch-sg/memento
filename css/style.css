@@ -2,7 +2,7 @@
 
 :root {
     --add: #f7d1cd;
-    --sekclr: #F5F5F5DE;
+    --sekclr: #DDDDDDDE;
     --hclr: #b392ac;
     --minclr: #0B0B0D; // #141618 // #d1b3c4 // #0B0B0D // #101113
     --primclr: #735d78; // #e0d2ea
@@ -16,6 +16,12 @@
     /* padding: 5px; */
     margin-bottom: 5px;
     text-decoration: none;
+}
+
+hr {
+    border: 1px solid #FFFFFF0C;
+    width: 100%;
+    margin-bottom: 75px;
 }
 
 /*  PRIMARY  */ 
@@ -95,7 +101,7 @@ header {
 /*  CLASS ASSETS  */ 
 
 .container {
-    margin-top: 100px;
+    margin-top: 75px;
     color: var(--bclr);
 }
 
@@ -181,7 +187,15 @@ form {
     display: none;
 }
 
+#form2 {
+    display: none;
+} #tmr1 {
+    display: none;
+}
+
 .newli {
     /* visibility: hidden; */
     display: none;
 }
+
+
