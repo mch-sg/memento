@@ -37,7 +37,23 @@ function addTodo(todo) {
 
     if (todoText) {
         let TodoEl = document.createElement('li'); 
+        let abc = document.getElementsByClassName('primlist');
         TodoEl.classList.add('primlist');
+        
+
+        // drag and drop
+        // *
+        TodoEl.classList.add('draggable');
+        TodoEl.draggable = true;
+        
+
+        // editable content
+        // *
+        // TodoEl.setAttribute("contentEditable", true);
+        if(TodoEl.classList.contains('toedit')) {
+            TodoEl.setAttribute("contentEditable", true);
+        }
+
 
         if(todo && todo.completed) {
             TodoEl.classList.add('completed');
@@ -105,3 +121,81 @@ function confirmation() {
         clearthis();
     }
 }
+
+
+// primlist contenteditable
+// *
+// *
+
+var list = document.querySelector('li');
+var plist = document.querySelector('.primlist');
+var plist2 = document.getElementsByClassName('primlist')[0];
+
+// If disabled, save text
+if(!list.contentEditable === 'false') {
+    localStorage.setItem('content', plist2.innerHTML);
+}
+
+
+
+
+// primlist drag and drop
+// *
+// *
+
+let dragged;
+let id;
+let index;
+let indexDrop;
+let lists;
+
+document.addEventListener("dragstart", ({target}) => {
+      dragged = target;
+      id = target.id;
+      lists = target.parentNode.children;
+      for(let i = 0; i < lists.length; i += 1) {
+      	if(lists[i] === dragged){
+          index = i;
+        }
+      }
+});
+
+document.addEventListener("dragover", (event) => {
+      event.preventDefault();
+});
+
+document.addEventListener("drop", ({target}) => {
+   if(target.className == "dropzone" && target.id !== id) {
+       dragged.remove( dragged );
+      for(let i = 0; i < lists.length; i += 1) {
+      	if(lists[i] === target){
+          indexDrop = i;
+        }
+      }
+      console.log(index, indexDrop);
+      if(index > indexDrop) {
+      	target.before( dragged );
+      } else {
+       target.after( dragged );
+      }
+    }
+});
+
+
+
+// edit button
+// *
+
+// function editthis() {
+//     let aa = document.getElementsByClassName('todos')[0];
+//     let editme = document.createElement('img'); 
+    
+//     for (var i = 0; i < abc.length; i++) {
+//         abc[i].classList.add('toedit');
+//     }
+
+//     editme.classList.add('dropzone');
+
+
+//     aa.appendChild(editme);
+// }
