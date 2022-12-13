@@ -1,41 +1,50 @@
-const draggables = document.querySelectorAll('.draggable');
-const containers = document.querySelectorAll('.todos');
+let draggables = document.querySelectorAll('.draggable');
+let containers = document.querySelectorAll('.todos');
+
+
 
 draggables.forEach(draggable => {
+    console.log("test: " + draggable);
+
     draggable.addEventListener('dragstart', () => {
+        console.log("dragging test")
         draggable.classList.add('dragging');
     });
 
     draggable.addEventListener('dragend', () => {
         draggable.classList.remove('dragging');
     });
-})
+});
 
 containers.forEach(container => {
     container.addEventListener('dragover', e => {
         e.preventDefault();
-        const afterElement = getDragAfterElement(container, e.clientY);
-        const draggable = document.querySelector('.dragging');
+        let afterElement = getDragAfterElement(container, e.clientY);
+        let draggable = document.querySelectorAll('.dragging');
         if (afterElement == null) {
-            container.appendChild(draggable);
-            updateLS(); 
-            updateLS1(); 
-            updateLS2();
+            draggable.forEach(draggabl => {
+                container.appendChild(draggabl);
+                updateLS(); 
+                updateLS1(); 
+                updateLS2();
+            })
         } else {
-            container.insertBefore(draggable, afterElement);
-            updateLS(); 
-            updateLS1(); 
-            updateLS2();
+            draggable.forEach(draggabl => {
+                container.insertBefore(draggabl, afterElement);
+                updateLS(); 
+                updateLS1(); 
+                updateLS2();
+            })
         }
     });
 })
 
 function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')];
+    let draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')];
 
     return draggableElements.reduce((closest, child) => {
-        const box = child.getBoundingClientRect();
-        const offset = y - box.top - box.height / 2;
+        let box = child.getBoundingClientRect();
+        let offset = y - box.top - box.height / 2;
         if (offset < 0 && offset > closest.offset) {
             return { offset: offset, element: child }
         } else {

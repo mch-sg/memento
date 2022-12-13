@@ -28,6 +28,7 @@ hr {
 
 body {
     font-family: 'Raleway', 'Inter', sans-serif;
+    font-variant-numeric: lining-nums;
     background-color: var(--b); 
     margin: 0;
     padding: 0;
