@@ -27,6 +27,10 @@ hr {
 /*  PRIMARY  */ 
 
 body {
+    font-family: 'Raleway', 'Inter', sans-serif;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum";
+    
     background-color: var(--b); 
     margin: 0;
     padding: 0;
@@ -54,6 +58,7 @@ h2, a, p {
     font-weight: 500;
     font-size: 17px;
     color: var(--sekclr); // #0000006F
+    
 }
 
 p a  {
@@ -151,7 +156,7 @@ form {
 }
 
 .todos li {
-    transition: 0.3s;
+    transition: 0.2s;
     color: var(--sekclr);
     text-align: left;
     border-top: 1px solid #FFFFFF0A;
@@ -196,6 +201,6 @@ form {
 .newli {
     /* visibility: hidden; */
     display: none;
+    width: 4rem;
+    margin: auto;
 }
-
-
