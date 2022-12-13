@@ -28,6 +28,9 @@ hr {
 
 body {
     font-family: 'Raleway', 'Inter', sans-serif;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum";
+    
     background-color: var(--b); 
     margin: 0;
     padding: 0;
@@ -54,6 +57,7 @@ h2, a, p {
     font-weight: 400;
     font-size: 17px;
     color: var(--sekclr); // #0000006F
+    
 }
 
 p a  {
@@ -205,6 +209,6 @@ form {
 .newli {
     /* visibility: hidden; */
     display: none;
+    width: 4rem;
+    margin: auto;
 }
-
-
