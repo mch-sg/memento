@@ -39,6 +39,11 @@ function addTodo2(todo2) {
         let TodoEl2 = document.createElement('li'); 
         TodoEl2.classList.add('terlist');
 
+        // drag and drop
+        // *
+        TodoEl2.classList.add('draggable');
+        TodoEl2.draggable = true;
+
         if(todo2 && todo2.completed) {
             TodoEl2.classList.add('completed');
         }

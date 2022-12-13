@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pageload.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/dragging.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="jquery-ui-1.13.2/"></script>
@@ -33,7 +34,7 @@
     <!-- <link href="https://i.imgur.com/93xMaAY.png" rel="shortcut icon"> -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
 </head>
-<body ondragstart="return false;" ondrop="return false;" onload="checklist()">
+<body onload="checklist()"> <!--  ondragstart="return false;" ondrop="return false;"-->
 
 <header>
     <h1>memento</h1>
@@ -47,7 +48,6 @@
         <div class="todow">
             <a style="color: white;cursor: default;" id="date">today's tasks</a>
             <a onclick="confirmation()">clear</a>
-            </div> 
         </div>
     </div>
 
@@ -60,7 +60,7 @@
             autocomplete="off"
         />
 
-        <ul class="todos" id="todos" draggable="false">
+        <ul class="todos" id="todos">
             
         </ul>
     </form>
@@ -91,7 +91,7 @@
             autocomplete="off"
             
         />
-        <ul class="todos" id="todos1" draggable="true" ondragover="allowDrop(event)" ondrop="drop(event)" ondragstart="drag(event)">
+        <ul class="todos" id="todos1">
         </ul>
     </form>
     </div>
@@ -131,7 +131,7 @@
         <br />
         <br />
         <br />
-        Left click to toggle complete. 
+        Left click to toggle complete. Left click and drag to reorder.
         <br />
         Right click to delete the todo.
     </small>
@@ -142,6 +142,7 @@
 <script src="scripts/primary-list.js"></script>
 <script src="scripts/secondary-list.js"></script>
 <script src="scripts/tertiary-list.js"></script>
+<script src="scripts/draggable.js" defer></script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GLZENNWMK"></script>

@@ -39,6 +39,11 @@ function addTodo1(todo1) {
         let TodoEl1 = document.createElement('li'); 
         TodoEl1.classList.add('seclist');
 
+        // drag and drop
+        // *
+        TodoEl1.classList.add('draggable');
+        TodoEl1.draggable = true;
+
         if(todo1 && todo1.completed) {
             TodoEl1.classList.add('completed');
         }

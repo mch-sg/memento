@@ -1,0 +1,18 @@
+.draggable {
+    /* cursor: move; */
+    user-select: none;
+    transition: 0.2s;
+}
+
+.draggable:active {
+    transform: scale(0.99);
+}
+
+.draggable.dragging {
+    opacity: 0.5;
+    transform: scale(0.99);
+
+    cursor: none;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}

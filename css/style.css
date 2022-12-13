@@ -30,7 +30,7 @@ body {
     font-family: 'Raleway', 'Inter', sans-serif;
     font-variant-numeric: lining-nums;
     font-feature-settings: "lnum";
-    
+
     background-color: var(--b); 
     margin: 0;
     padding: 0;
