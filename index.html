@@ -6,35 +6,43 @@
     <link rel="stylesheet" href="css/pageload.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/dragging.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="jquery-ui-1.13.2/"></script>
+    <script src="jquery-ui-1.13.2/"></script> -->
     <script rel="preload" src="scripts/check.js"></script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:locale" content="en_US">
-    <meta name="description" content="todo list for routines">
-    <meta name="keywords" content="todo, list, help, routines, memento todo list, todo-list, to do list, keep tracks of routine">
+    <meta name="title" content="memento - todo list">
+    <meta name="description" content="Rapid todo list app for on-the-go creation.">
+    <meta name="keywords" content="todo, list, help, routines, memento todo list, todo-list, to do list, 
+    keep tracks of routine, daily todo list, the todo list, best free todo list app, todo list template, 
+    todo relatos, checklist, easy to do list, easy todo list, rapid, todo, list, app, --go, creation, todo list app, todo list google">
+
     <meta name="author" content="Magnus Hvidtfeldt"> 
+    <meta name="start_url" content="https://memento.today">
+    <meta name="robots" content="index, follow">
 
     <meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="memento">
-	<meta name="twitter:description" content="todo list for routines">
+	<meta name="twitter:description" content="Rapid todo list app for on-the-go creation.">
 	<meta name="twitter:image" content="https://i.imgur.com/oPHJQWZ.png"> 
+    <meta name="twitter:site" content="@hvidtfldt">
+
 	<meta property="og:locale" content="en_US">
 	<meta property="og:title" content="memento">
-	<meta property="og:description" content="todo list for routines">
+	<meta property="og:description" content="Rapid todo list app for on-the-go creation.">
 	<meta property="og:url" content="https://memento.today">
 	<meta property="og:image" content="https://i.imgur.com/oPHJQWZ.png">
 	<meta property="og:type" content="website">
 
-    <!-- <link href="https://i.imgur.com/93xMaAY.png" rel="shortcut icon"> -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
 </head>
 <body onload="checklist()"> <!--  ondragstart="return false;" ondrop="return false;"-->
+
+<div id="preloader" class="loader"></div>
 
 <header>
     <h1>memento</h1>
@@ -47,7 +55,7 @@
     <div class="container">
         <div class="todow">
             <a style="color: white;cursor: default;" id="date">today's tasks</a>
-            <a onclick="confirmation()">clear</a>
+            <a id="clear1" onclick="confirmation()">clear</a>
         </div>
     </div>
 
@@ -66,7 +74,7 @@
     </form>
 
     <!-- NEW LIST 1 -->
-    <a id="newli" class="newli" onclick="newbox()">new list<br/></a>
+    <a id="newli" class="newli">new list<br/></a>
 
     <!--    LIST 2     -->
     <div class="tomorrow" id="tmr">
@@ -76,7 +84,7 @@
             <a id="nameoflist1" style="color: white;cursor: default;">list name...</a>
             <div>
                 <a onclick="deletelist()" style="margin-right: 25px;">delete </a>
-                <a onclick="confirmit()">clear</a>
+                <a id="clear2" onclick="confirmit()">clear</a>
             </div>
             </div> 
         </div>
@@ -97,7 +105,7 @@
     </div>
 
     <!-- NEW LIST 2 -->
-    <a id="newli2" class="newli" onclick="newbox1()">new list<br/></a>
+    <a id="newli2" class="newli">new list<br/></a>
 
     <!--    LIST 3     -->
     <div class="tomorrow" id="tmr1">
@@ -107,7 +115,7 @@
                 <a id="nameoflist2" style="color: white;cursor: default;">list name...</a>
                 <div>
                     <a onclick="deletelist1()" style="margin-right: 25px;">delete </a>
-                    <a onclick="confirmit2()">clear</a>
+                    <a id="clear3" onclick="confirmit2()">clear</a>
                 </div>
                 </div> 
             </div>
@@ -152,5 +160,17 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4GLZENNWMK');
+</script>
+
+<script>
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+        document.querySelector('.loader').classList.add('loader--hidden');
+        }, 200)
+
+        document.querySelector('.loader').addEventListener('transitionend', function() {
+            document.querySelector('.loader').style.display = 'none';
+        })
+    });
 </script>
 </html>

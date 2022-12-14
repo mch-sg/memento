@@ -1,22 +1,3 @@
-
-
-
-
-// FUNCTION FOR DRAG AND DROP (NOT IN USE)
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-
-
-
-
 //  GET TODAYS DATE
 
 const date = new Date();
@@ -34,20 +15,37 @@ let currentDate = `${daysa} ${month} ${day}, ${year}`; // Load the name
 document.getElementById("date").innerHTML = currentDate; // input the name
 
 
-// U SURE?
 
-// if (!localStorage.hideAlert) {
-//     $(function() {
-//       $("#dialog").dialog();
-//     });
-//   } else {
-//     $("#dialog").css("display", "none");
-//   }
-//   $(".yes").on("click", function() {
-//     $("#dialog").dialog("close");
-//   });
-//   $(".no").on("click", function() {
-//     localStorage.setItem('hideAlert', true);
-//     $("#dialog").dialog("close");
+// NEWLI MAKE A CRAWLABLE
+
+var newlist1 = document.querySelector('#newli');
+var newlist2 = document.querySelector('#newli2');
+
+newlist1.addEventListener("click", function onclick(event) {
+    newbox();
+});
+
+newlist2.addEventListener("click", function onclick(event) {
+    newbox1();
+});
+
+
+
+// MAKE CLEAR CRAWLABLE
+
+// var c1 = document.querySelector('#clear1');
+// var c2 = document.querySelector('#clear2');
+// var c3 = document.querySelector('#clear3');
+
+// c1.addEventListener("click", function onclick(event) {
+//     confirmation();
+// });
+
+// c2.addEventListener("click", function onclick(event) {
+//     confirmit()
+// });
+
+// c3.addEventListener("click", function onclick(event) {
+//     confirmit2()
 // });
 

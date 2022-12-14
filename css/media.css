@@ -20,6 +20,11 @@
     .todos li {
         font-size: 1.1rem;
     }
+
+    .loader::after {
+        width: 75px;
+        height: 75px;
+    }
 }
 
 @media only screen 

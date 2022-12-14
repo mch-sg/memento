@@ -4,7 +4,7 @@
 
 
 // music load
-const ding2 = new Audio('assets/myding2.wav');
+const ding2 = new Audio('assets/complete.mp3');
 ding2.volume = 0.3;
 
 // todo load
@@ -99,9 +99,11 @@ function updateLS2() {
 let cleared2 = 0;
 
 function clearthis2() {
-    cleared2 = 2;
+    cleared2 = 1;
     console.log('clear2');
+    localStorage.removeItem('todos2');
     todoUL2.innerHTML = '';
+    updateLS2();
 }
 
 function confirmit2() {

@@ -4,10 +4,8 @@ let containers = document.querySelectorAll('.todos');
 
 
 draggables.forEach(draggable => {
-    console.log("test: " + draggable);
 
     draggable.addEventListener('dragstart', () => {
-        console.log("dragging test")
         draggable.classList.add('dragging');
     });
 

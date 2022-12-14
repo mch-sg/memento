@@ -4,7 +4,7 @@
 
 
 // music load
-const ding = new Audio('assets/myding2.wav');
+const ding = new Audio('assets/complete.mp3');
 ding.volume = 0.3;
 
 // todo load
@@ -50,9 +50,9 @@ function addTodo(todo) {
         // editable content
         // *
         // TodoEl.setAttribute("contentEditable", true);
-        if(TodoEl.classList.contains('toedit')) {
-            TodoEl.setAttribute("contentEditable", true);
-        }
+        // if(TodoEl.classList.contains('toedit')) {
+        //     TodoEl.setAttribute("contentEditable", true);
+        // }
 
 
         if(todo && todo.completed) {
@@ -104,82 +104,21 @@ function updateLS() {
     });
 
 }
-let cleared = 0;
-
-function clearthis() {
-    cleared = 1;
-    console.log('clear');
-    // localStorage.clear();
-    // todoUL.remove();
-    todoUL.innerHTML = '';
-}
-
-function confirmation() {
-    var returcofir = confirm("Are you sure you want to delete all your todos in this list?");
-
-    if (returcofir == true) {
-        clearthis();
-    }
-}
 
 
 // primlist contenteditable
 // *
 // *
 
-var list = document.querySelector('li');
-var plist = document.querySelector('.primlist');
-var plist2 = document.getElementsByClassName('primlist')[0];
+// var list = document.querySelector('li');
+// var plist = document.querySelector('.primlist');
+// var plist2 = document.getElementsByClassName('primlist')[0];
 
-// If disabled, save text
-if(!list.contentEditable === 'false') {
-    localStorage.setItem('content', plist2.innerHTML);
-}
+// // If disabled, save text
+// if(!list.contentEditable === 'false') {
+//     localStorage.setItem('content', plist2.innerHTML);
+// }
 
-
-
-
-// primlist drag and drop
-// *
-// *
-
-let dragged;
-let id;
-let index;
-let indexDrop;
-let lists;
-
-document.addEventListener("dragstart", ({target}) => {
-      dragged = target;
-      id = target.id;
-      lists = target.parentNode.children;
-      for(let i = 0; i < lists.length; i += 1) {
-      	if(lists[i] === dragged){
-          index = i;
-        }
-      }
-});
-
-document.addEventListener("dragover", (event) => {
-      event.preventDefault();
-});
-
-document.addEventListener("drop", ({target}) => {
-   if(target.className == "dropzone" && target.id !== id) {
-       dragged.remove( dragged );
-      for(let i = 0; i < lists.length; i += 1) {
-      	if(lists[i] === target){
-          indexDrop = i;
-        }
-      }
-      console.log(index, indexDrop);
-      if(index > indexDrop) {
-      	target.before( dragged );
-      } else {
-       target.after( dragged );
-      }
-    }
-});
 
 
 
@@ -199,3 +138,23 @@ document.addEventListener("drop", ({target}) => {
 
 //     aa.appendChild(editme);
 // }
+
+
+// read
+let cleared = 0;
+
+function clearthis() {
+    cleared = 1;
+    console.log('clear');
+    localStorage.removeItem('todos');
+    todoUL.innerHTML = '';
+    updateLS();
+}
+
+function confirmation() {
+    var returcofir = confirm("Are you sure you want to delete all your todos in this list?");
+
+    if (returcofir == true) {
+        clearthis();
+    }
+}
