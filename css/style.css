@@ -18,7 +18,7 @@
     --minclr: #0B0B0D; // #141618 // #d1b3c4 // #0B0B0D // #101113
     --primclr: #6d2e46; // #e0d2ea
     --bclr: #0000006F;
-    --b: #030304; /* #030304 */
+    --b: #030304; /* #030304 / #020202 / #000 */
     --dim: #FFFFFF44; // #00000041
 
 
@@ -83,7 +83,7 @@ h1 {
     padding-top: 5px;
 }
 
-h2, a, p {
+h2, p {
     text-align: center;
     align-items: center;
     font-weight: 400;
@@ -92,7 +92,21 @@ h2, a, p {
     
 }
 
-p a  {
+h1 a {
+    color: var(--w);
+    text-align: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 65px;
+    color: var(--hclr);
+    padding-top: 5px;
+    transition: 0.2s;
+} h1 a:hover {
+    color: var(--buttonhover);
+    /* opacity: 0.5; */
+}
+
+p a {
     color: var(--add);
     transition: 0.2s;
     cursor: pointer;
@@ -199,11 +213,11 @@ form {
 }
 
 .todos li {
-    transition: 0.2s;
+    /* transition: 0.2s; */
     color: var(--sekclr);
     text-align: left;
     border-top: 1px solid var(--borderclr);
-    /* border-radius: 5px; */
+    /* border-radius: 10px; */
     background-color: var(--minclr);
     font-size: 1.25rem;
     padding: 1rem 1.5rem;
@@ -339,7 +353,7 @@ button:active {
 
 
 .bri {
-    transition: 0.2s;
+    /* transition: 0.2s; */
     color: var(--add);
     
 } .bri:hover {
@@ -347,11 +361,12 @@ button:active {
 }
 
 
-#toggleDark {
+#toggleLight {
     cursor: pointer;
 }
 
 i {
     font-size: 20px;
     cursor: pointer;
+    transition: 0.2s;
 }

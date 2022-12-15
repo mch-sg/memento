@@ -47,6 +47,10 @@ function newbox() {
         localStorage.setItem('nameoflist1', nameoflist1)
     }
 
+    if(nameoflist1 === null) {
+        return;
+    }
+
     document.getElementById('newli').style.display = 'none';
 
     if (!localStorage.list2) {
@@ -79,7 +83,6 @@ function deletelist() {
         localStorage.removeItem("todos1");
     }
 
-
 }
 
 
@@ -99,6 +102,11 @@ function newbox1() {
         localStorage.setItem('list2', true)
         localStorage.setItem('nameoflist2', nameoflist2)
     }
+
+    if(nameoflist2 === null) {
+        return;
+    }
+
 
     document.getElementById('newli2').style.display = 'none';
 

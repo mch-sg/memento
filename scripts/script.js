@@ -40,6 +40,7 @@ newlist2.addEventListener("click", function onclick(event) {
 var td = document.querySelector('#toggleLight');
 
 td.addEventListener("click", function onclick(event) {
+    td.style.transition = "0.5s";
     light();
 });
 
@@ -47,9 +48,10 @@ td.addEventListener("click", function onclick(event) {
 // light mode
 function light() {
     const tee = document.querySelector('i');
+    tee.style.transition = "0.5s";
     tee.classList.toggle('bi-moon');
 
-    tee.style.transition = "0.5s";
+    
 
     var element = document.body;
     element.classList.toggle("light-theme");
