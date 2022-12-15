@@ -31,21 +31,59 @@ newlist2.addEventListener("click", function onclick(event) {
 
 
 
-// MAKE CLEAR CRAWLABLE
 
-// var c1 = document.querySelector('#clear1');
-// var c2 = document.querySelector('#clear2');
-// var c3 = document.querySelector('#clear3');
 
-// c1.addEventListener("click", function onclick(event) {
-//     confirmation();
-// });
+// toggle light mode
+// *
+// *
 
-// c2.addEventListener("click", function onclick(event) {
-//     confirmit()
-// });
+var td = document.querySelector('#toggleLight');
 
-// c3.addEventListener("click", function onclick(event) {
-//     confirmit2()
-// });
+td.addEventListener("click", function onclick(event) {
+    light();
+});
 
+
+// light mode
+function light() {
+    const tee = document.querySelector('i');
+    tee.classList.toggle('bi-moon');
+
+    tee.style.transition = "0.5s";
+
+    var element = document.body;
+    element.classList.toggle("light-theme");
+
+
+    // var
+    var theme;
+
+    if(element.classList.contains("light-theme")) {
+        theme = "light";
+    } else {
+        theme = "dark";
+    }
+
+    // save localstorage
+    localStorage.setItem("theme", JSON.stringify(theme));
+
+}
+
+
+// check localstorage for theme
+let getTheme = JSON.parse(localStorage.getItem("theme"));
+console.log(getTheme);
+
+if(getTheme === "light") {
+    // document.body.classList = "light-theme";
+    light();
+}
+
+
+
+// If user prefers light mode in os settings,
+// it will automatically change to light mode
+const lightModePreference = window.matchMedia("(prefers-color-scheme: light)");
+
+// specify event-type as first argument
+lightModePreference.addEventListener("change", e => e.matches && light());

@@ -3,19 +3,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Raleway:wght@300;400;500;600&display=swap');
 
 :root {
+    --lihover: #101113;
+    --smallclr: #F5F5F555;
+    --borderclr: #FFFFFF0A;
+    --hrc: #FFFFFF0C;
+    --loaderclr: #FFFFFF2C;
+
     --dimclr: #AD616A; /* #A679AE / #1d2d44 / #774147 */  /* #A099BC */
     --buttonhover: #774147;
+    --w: #CDCDCD;
     --add: #DDBEBE;
     --sekclr: #DDDDDDBF;
-    --hclr: #a26769; /* #b392ac / #3e5c76 / #a26769 */
+    --hclr: #B8636D; /* #b392ac / #3e5c76 / #a26769 / #B8636D*/
     --minclr: #0B0B0D; // #141618 // #d1b3c4 // #0B0B0D // #101113
     --primclr: #6d2e46; // #e0d2ea
     --bclr: #0000006F;
-    --b: #000000;
+    --b: #030304; /* #030304 */
     --dim: #FFFFFF44; // #00000041
+
+
 }
 /*  #b392ac /#8c2f39 / #3e5c76 */
 /* #735d78 / #6d2e46 / #f7d1cd */
+
+body.light-theme { 
+    --b: #E9E8E8;
+    --minclr: #E4E4E4;
+    --lihover: #D9D9D9;
+    --borderclr: #0000000A;
+    --hrc: #4E4E4E0C;
+    --loaderclr: #0000002C;
+
+    --add: #B4ABA9;
+    --hclr: #B8636D;
+    
+    --w: #3E3E3E;
+    --sekclr: #0E0E0EBF;
+    --dim: #00000044;
+    --smallclr: #15151555;
+}
+
 
 * {
     margin-bottom: 5px; 
@@ -24,7 +51,7 @@
 
 
 hr { 
-    border: 1px solid #FFFFFF0C;
+    border: 1px solid var(--hrc);
     width: 100%;
     margin-bottom: 75px;
 }
@@ -47,7 +74,7 @@ body {
 }
 
 h1 {
-    color: #ffffff;
+    color: var(--w);
     text-align: center;
     align-items: center;
     font-weight: 400;
@@ -81,21 +108,27 @@ div a {
 }
 
 a {
-    color: var(--add);
+    color: var(--w);
     transition: 0.2s;
     cursor: pointer;
 }
-a:hover {
+
+
+.hovEl {
+    color: var(--add);
+    transition: 0.2s;
+    cursor: pointer;
+} .hovEl:hover {
     color: var(--dimclr);
-    opacity: 1;
 }
+
 
 small {
     text-align: center;
     margin-top: 3rem;
     font-weight: 500;
     font-size: 12px;
-    color: #F5F5F555;
+    color: var(--smallclr);
 }
 
 main {
@@ -116,7 +149,7 @@ header {
 
 
 form {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     margin: auto;
     width: 500px;
     max-width: 100%;	
@@ -129,12 +162,12 @@ form {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     width: 90%;
-    border-radius: 15px;
+    border-radius: 10px;
     color: var(--sekclr);
     background-color: var(--minclr);
     border: none;
     font-size: 1.25rem;
-    /* border: 1px solid red; */
+    /* border: 1px solid #FFFFFF0A; */
     padding: 1rem 1.5rem;
     display: block;
     
@@ -161,13 +194,16 @@ form {
     padding: 0;
     list-style-type: none;
     cursor: pointer;
+    /* border: 1px solid #FFFFFF0A; */
+    border-radius: 10px;
 }
 
 .todos li {
     transition: 0.2s;
     color: var(--sekclr);
     text-align: left;
-    border-top: 1px solid #FFFFFF0A;
+    border-top: 1px solid var(--borderclr);
+    /* border-radius: 5px; */
     background-color: var(--minclr);
     font-size: 1.25rem;
     padding: 1rem 1.5rem;
@@ -175,7 +211,7 @@ form {
 
 .todos li:hover {
     color: var(--dimclr);
-    background-color: #101113;
+    background-color: var(--lihover);
     transform: scale(0.99);
     border-radius: 10px;
 }
@@ -256,7 +292,7 @@ button:active {
 
 /* preloader */
 #preloader {
-    background-color: #000;
+    background-color: var(--b);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -278,7 +314,7 @@ button:active {
     display: block;
     width: 125px;
     height: 125px;
-    border: 5px solid #FFFFFF2C;
+    border: 5px solid var(--loaderclr);
     border-top-color: var(--hclr);
     border-radius: 50%;
     /* background: #fff; */
@@ -300,3 +336,22 @@ button:active {
     visibility: hidden;
 }
 
+
+
+.bri {
+    transition: 0.2s;
+    color: var(--add);
+    
+} .bri:hover {
+    color: var(--dimclr);
+}
+
+
+#toggleDark {
+    cursor: pointer;
+}
+
+i {
+    font-size: 20px;
+    cursor: pointer;
+}
