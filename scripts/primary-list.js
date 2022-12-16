@@ -37,9 +37,24 @@ function addTodo(todo) {
 
     if (todoText) {
         let TodoEl = document.createElement('li'); 
+
         let abc = document.getElementsByClassName('primlist');
         TodoEl.classList.add('primlist');
-        
+
+
+        // checkbox?
+        let todoTag = document.createElement('input');
+        todoTag.type = "checkbox";
+        todoTag.name = "";
+        // todoTag.id = "id";
+
+        var label = document.createElement('label');
+        label.htmlFor = "id";
+
+        // var para = document.createElement('p');
+        var spana = document.createElement('span');
+
+
 
         // drag and drop
         // *
@@ -57,12 +72,15 @@ function addTodo(todo) {
 
         if(todo && todo.completed) {
             TodoEl.classList.add('completed');
+            spana.classList.add('completed');
         }
 
         TodoEl.innerText = todoText;
+        // para.innerText = todoText;
 
         TodoEl.addEventListener('click', () => {
             TodoEl.classList.toggle('completed');
+            spana.classList.toggle('completed');
 
             if (TodoEl.classList.contains('completed')) {
                 ding.play(); 
@@ -80,9 +98,19 @@ function addTodo(todo) {
             updateLS();
         });
 
-        todoUL.appendChild(TodoEl);
+
+        todoUL.appendChild(TodoEl); // label
+
+        // TodoEl.appendChild(label); // todoTag
+        // label.appendChild(todoTag); // TodoEl
+        // label.appendChild(para); 
+        TodoEl.appendChild(spana); // TodoEl
+        // spanfirst.appendChild(spana); // TodoEl
+
+        // todoUL.appendChild(TodoEl);
 
         input.value = '';
+
     }
 
     updateLS();

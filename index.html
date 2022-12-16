@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="css/pageload.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/dragging.css">
+    <link rel="stylesheet" href="css/theme-popup.css">
+    <link rel="stylesheet" href="css/checkbox.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="jquery-ui-1.13.2/"></script> -->
+    <script src="jquery-ui-1.13.2/"></script>  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <script rel="preload" src="scripts/check.js"></script>
 
@@ -39,7 +41,7 @@
 	<meta property="og:image" content="https://i.imgur.com/oPHJQWZ.png">
 	<meta property="og:type" content="website">
 
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-r.svg">
 </head>
 <body onload="checklist()"> <!--  ondragstart="return false;" ondrop="return false;"-->
 
@@ -76,7 +78,7 @@
     </form>
 
     <!-- NEW LIST 1 -->
-    <a id="newli" class="newli hovEl">new list<br/></a>
+    <a id="newli" class="newli hovEl"><button>new list<br/></button></a>
 
     <!--    LIST 2     -->
     <div class="tomorrow" id="tmr">
@@ -107,7 +109,7 @@
     </div>
 
     <!-- NEW LIST 2 -->
-    <a id="newli2" class="newli hovEl">new list<br/></a>
+    <a id="newli2" class="newli hovEl"><button>new list<br/></button></a>
 
     <!--    LIST 3     -->
     <div class="tomorrow" id="tmr1">
@@ -153,6 +155,40 @@
     <br />
     <br />
     <i class="bi bi-brightness-high-fill bri" id="toggleLight"></i>
+
+    <i data-modal-target="#modal" class="bi bi-palette-fill bri popup" style="margin-left: 20px"></i>
+
+    <!-- <i class="bi bi-bookmark-heart-fill bri" style="margin-left: 20px;"></i> -->
+
+
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Settings</div>
+            <!-- <button data-close-button class="close-button"></button> -->
+            <i class="bi bi-x close-button" data-close-button></i>
+        </div>
+        <div class="modal-body">
+
+            <div class="title">Your themes</div>
+            <br>
+            <a class="select hvr" onclick="red()"><button class="crimson">Crimson</button></a>
+            <a class="select hvr" onclick="yellow()"><button class="mandarin">Mandarin</button></a>
+            <a class="select hvr" onclick="blue()"><button class="blueberry">Blueberry</button></a>
+            <a class="select hvr" onclick="magenta()"><button class="memento">Memento</button></a>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="title">Date & Time</div>
+            <br />
+            <p style="text-align: left;margin-top:-5px;opacity:0.8;">Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Possimus tempora pariatur aspernatur. Sequi, voluptatibus quae.</p>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    
 </footer>
 
 </body>
@@ -161,6 +197,8 @@
 <script src="scripts/secondary-list.js"></script>
 <script src="scripts/tertiary-list.js"></script>
 <script src="scripts/draggable.js" defer></script>
+<script src="scripts/palette-selector.js"></script>
+<link rel="stylesheet" href="css/palette-selector.css">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GLZENNWMK"></script>

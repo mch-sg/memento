@@ -1,372 +1,393 @@
-/*  ROOT  */ 
+/*  ROOT  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Raleway:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Raleway:wght@300;400;500;600&display=swap");
 
 :root {
-    --lihover: #101113;
-    --smallclr: #F5F5F555;
-    --borderclr: #FFFFFF0A;
-    --hrc: #FFFFFF0C;
-    --loaderclr: #FFFFFF2C;
+  --fw: 300;
+  --lihover: #101113;
+  --smallclr: #f5f5f555;
+  --borderclr: #ffffff0a;
+  --hrc: #ffffff0c;
+  --loaderclr: #ffffff2c;
 
-    --dimclr: #AD616A; /* #A679AE / #1d2d44 / #774147 */  /* #A099BC */
-    --buttonhover: #774147;
-    --w: #CDCDCD;
-    --add: #DDBEBE;
-    --sekclr: #DDDDDDBF;
-    --hclr: #B8636D; /* #b392ac / #3e5c76 / #a26769 / #B8636D*/
-    --minclr: #0B0B0D; // #141618 // #d1b3c4 // #0B0B0D // #101113
-    --primclr: #6d2e46; // #e0d2ea
-    --bclr: #0000006F;
-    --b: #030304; /* #030304 / #020202 / #000 */
-    --dim: #FFFFFF44; // #00000041
+  --dimclr: #ad616a; /* #A679AE / #1d2d44 / #774147 */ /* #A099BC */
+  --buttonhover: #774147;
+  --w: #cdcdcd;
+  --add: #ddbebe;
+  --sekclr: #ddddddbf;
+  --hclr: #b8636d; /* #b392ac / #3e5c76 / #a26769 / #B8636D*/
+  --minclr: #0b0b0d; // #141618 // #d1b3c4 // #0B0B0D // #101113
 
-
-}
-/*  #b392ac /#8c2f39 / #3e5c76 */
-/* #735d78 / #6d2e46 / #f7d1cd */
-
-body.light-theme { 
-    --b: #E9E8E8;
-    --minclr: #E4E4E4;
-    --lihover: #D9D9D9;
-    --borderclr: #0000000A;
-    --hrc: #4E4E4E0C;
-    --loaderclr: #0000002C;
-
-    --add: #B4ABA9;
-    --hclr: #B8636D;
-    
-    --w: #3E3E3E;
-    --sekclr: #0E0E0EBF;
-    --dim: #00000044;
-    --smallclr: #15151555;
+  --bclr: #0000006f;
+  --b: #030304; /* #030304 / #020202 / #000 */
+  --dim: #ffffff44; // #00000041
 }
 
+body.light-theme {
+  --fw: 300;
+  --b: #e9e8e8;
+  --minclr: #e4e4e4;
+  --lihover: #d9d9d9;
+  --borderclr: #0000000a;
+  --hrc: #4e4e4e0c;
+  --loaderclr: #0000002c;
+
+  --add: #b4aba9;
+
+  --w: #3e3e3e;
+  --sekclr: #0e0e0ebf;
+  --dim: #00000044;
+  --smallclr: #15151555;
+}
 
 * {
-    margin-bottom: 5px; 
-    text-decoration: none;
+  margin-bottom: 5px;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
-
-hr { 
-    border: 1px solid var(--hrc);
-    width: 100%;
-    margin-bottom: 75px;
+hr {
+  border: 1px solid var(--hrc);
+  width: 100%;
+  margin-bottom: 75px;
 }
 
-/*  PRIMARY  */ 
+/*  PRIMARY  */
 
 body {
-    font-family: 'Raleway', 'Inter', sans-serif;
-    font-variant-numeric: lining-nums;
-    font-feature-settings: "lnum";
+  font-family: "Raleway", "Inter", sans-serif;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
 
-    background-color: var(--b); 
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    display: flex;
+  background-color: var(--b);
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
 }
 
 h1 {
-    color: var(--w);
-    text-align: center;
-    align-items: center;
-    font-weight: 400;
-    font-size: 65px;
-    color: var(--hclr);
-    padding-top: 5px;
+  color: var(--w);
+  text-align: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 65px;
+  color: var(--hclr);
+  padding-top: 5px;
 }
 
-h2, p {
-    text-align: center;
-    align-items: center;
-    font-weight: 400;
-    font-size: 17px;
-    color: var(--sekclr); // #0000006F
-    
+h2,
+p {
+  text-align: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--sekclr); // #0000006F
 }
 
 h1 a {
-    color: var(--w);
-    text-align: center;
-    align-items: center;
-    font-weight: 400;
-    font-size: 65px;
-    color: var(--hclr);
-    padding-top: 5px;
-    transition: 0.2s;
-} h1 a:hover {
-    color: var(--buttonhover);
-    /* opacity: 0.5; */
+  color: var(--w);
+  text-align: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 65px;
+  color: var(--hclr);
+  padding-top: 5px;
+  /* transition: 0.2s; */
+}
+h1 a:hover {
+  color: var(--buttonhover);
+  /* opacity: 0.5; */
 }
 
 p a {
-    color: var(--add);
-    transition: 0.2s;
-    cursor: pointer;
+  color: var(--add);
+  /* transition: 0.2s; */
+  cursor: pointer;
 }
 
 p a:hover {
-    color: var(--dimclr);
-    opacity: 1;
+  color: var(--dimclr);
+  opacity: 1;
 }
 
 div a {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 a {
-    color: var(--w);
-    transition: 0.2s;
-    cursor: pointer;
+  color: var(--w);
+  /* transition: 0.2s; */
+  cursor: pointer;
 }
-
 
 .hovEl {
-    color: var(--add);
-    transition: 0.2s;
-    cursor: pointer;
-} .hovEl:hover {
-    color: var(--dimclr);
+  color: var(--add);
+  /* transition: 0.2s; */
+  cursor: pointer;
+}
+.hovEl:hover {
+  color: var(--dimclr);
 }
 
-
 small {
-    text-align: center;
-    margin-top: 3rem;
-    font-weight: 500;
-    font-size: 12px;
-    color: var(--smallclr);
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--smallclr);
 }
 
 main {
-    margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 header {
-    text-align: center;
-    align-items: center;
+  text-align: center;
+  align-items: center;
 }
 
-/*  CLASS ASSETS  */ 
+/*  CLASS ASSETS  */
 
 .container {
-    margin-top: 75px;
-    color: var(--bclr);
+  margin-top: 75px;
+  color: var(--bclr);
 }
 
-
 form {
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-    margin: auto;
-    width: 500px;
-    max-width: 100%;	
-    border: 1px solid #0000000A;
-    border-radius: 10px; 
-    background-color: var(--minclr); // var(--sekclr);
+  box-shadow: 0 5px 15px rgba(127, 127, 127, 0.075);
+  margin: auto;
+  width: 500px;
+  max-width: 100%;
+  border: 1px solid #0000000a;
+  border-radius: 10px;
+  background-color: var(--minclr); // var(--sekclr);
 }
 
 .input {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    width: 90%;
-    border-radius: 10px;
-    color: var(--sekclr);
-    background-color: var(--minclr);
-    border: none;
-    font-size: 1.25rem;
-    /* border: 1px solid #FFFFFF0A; */
-    padding: 1rem 1.5rem;
-    display: block;
-    
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  width: 90%;
+  border-radius: 10px;
+  color: var(--sekclr);
+  background-color: var(--minclr);
+  border: none;
+  font-size: 1.25rem;
+  /* border: 1px solid #FFFFFF0A; */
+  padding: 1rem 1.5rem;
+  display: block;
 }
 
 .input::placeholder {
-    color: var(--dim);
+  color: var(--dim);
 }
 
-
-
-.input:active, .input:focus {
-    outline: none;
-    border-radius: 10px 10px 0 0;
-    /* outline: 1px solid var(--sekclr); */
+.input:active,
+.input:focus {
+  outline: none;
+  border-radius: 10px 10px 0 0;
+  /* outline: 1px solid var(--sekclr); */
 }
 
 .todos {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    width: 100%;
-    color: white;
-    margin: auto;
-    padding: 0;
-    list-style-type: none;
-    cursor: pointer;
-    /* border: 1px solid #FFFFFF0A; */
-    border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: var(--fw);
+  width: 100%;
+  color: white;
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
+  cursor: pointer;
+  /* border: 1px solid #FFFFFF0A; */
+  border-radius: 10px;
 }
 
 .todos li {
-    /* transition: 0.2s; */
-    color: var(--sekclr);
-    text-align: left;
-    border-top: 1px solid var(--borderclr);
-    /* border-radius: 10px; */
-    background-color: var(--minclr);
-    font-size: 1.25rem;
-    padding: 1rem 1.5rem;
+  /* transition: 0.2s; */
+  color: var(--sekclr);
+  text-align: left;
+  border-top: 1px solid var(--borderclr);
+  /* border-radius: 10px; */
+  background-color: var(--minclr);
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
 }
 
 .todos li:hover {
-    color: var(--dimclr);
-    background-color: var(--lihover);
-    transform: scale(0.99);
-    border-radius: 10px;
+  color: var(--dimclr);
+  background-color: var(--lihover);
+  transform: scale(0.99);
+  border-radius: 10px;
 }
 
-
 .todos li.completed {
-    color: var(--dim);
-    text-decoration: line-through;
+  color: var(--dim);
+  text-decoration: line-through;
 }
 
 .todow {
-    opacity: 0.85;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    /* border: 1px solid #ffffff; */
-    padding: 5px;
+  opacity: 0.85;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  /* border: 1px solid #ffffff; */
+  padding: 5px;
 }
- 
-
-
 
 #form1 {
-    /* visibility: hidden; */
-    display: none;
-} #tmr {
-    /* visibility: hidden; */
-    display: none;
+  /* visibility: hidden; */
+  display: none;
+}
+#tmr {
+  /* visibility: hidden; */
+  display: none;
 }
 
 #form2 {
-    display: none;
-} #tmr1 {
-    display: none;
+  display: none;
+}
+#tmr1 {
+  display: none;
 }
 
 .newli {
-    /* visibility: hidden; */
-    display: none;
-    width: 4rem;
-    margin: auto;
+  /* visibility: hidden; */
+  display: none;
+  width: 7rem;
+  margin: auto;
 }
-
 
 .aalign {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 /* home page */
 /* buttons */
 
 button {
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
-    border: none;
-    border-radius: 15px;
-    padding: 1rem 1.5rem;
-    background-color: var(--hclr);
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  background-color: var(--hclr);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  color: var(--b);
 }
 
 button:hover {
-    background-color: var(--buttonhover);
-    transform: scale(0.99);
+  background-color: var(--buttonhover);
+  transform: scale(0.99);
 }
 
 button:active {
-    background-color: #735d78;
-    transform: scale(0.9);
+  /* background-color: #735d78; */
+  transform: scale(0.92);
 }
 
 /* preloader */
 #preloader {
-    background-color: var(--b);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    padding: 0;
-    margin: 0;
-    
-    top: 0;
-    left: 0;
+  background-color: var(--b);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
 
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    transition: opacity 0.5s, visibility 0.5s;
+  top: 0;
+  left: 0;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.5s, visibility 0.5s;
 }
 
 .loader::after {
-    content: "";
-    display: block;
-    width: 125px;
-    height: 125px;
-    border: 5px solid var(--loaderclr);
-    border-top-color: var(--hclr);
-    border-radius: 50%;
-    /* background: #fff; */
-    margin: 8px;
-    animation: loading 0.75s infinite linear;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 5px solid var(--loaderclr);
+  border-top-color: var(--hclr);
+  border-radius: 50%;
+  /* background: #fff; */
+  margin: 8px;
+  animation: loading 0.75s infinite linear;
 }
 
 @keyframes loading {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loader--hidden {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
-
-
 
 .bri {
-    /* transition: 0.2s; */
-    color: var(--add);
-    
-} .bri:hover {
-    color: var(--dimclr);
+  /* transition: 0.2s; */
+  color: var(--add);
+}
+.bri:hover {
+  color: var(--dimclr);
 }
 
-
 #toggleLight {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 i {
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.2s;
+  font-size: 20px;
+  cursor: pointer;
+  /* transition: 0.2s; */
+}
+
+.select {
+  cursor: default;
+  color: var(--w);
+  /* background-color: var(--w); */
+  /* padding-left: 15px; */
+}
+
+.hvr {
+  cursor: pointer;
+  /* color: var(--dim); */
+}
+
+.hvr:hover {
+  color: var(--dimclr);
+}
+
+/* settings button colors */
+
+.crimson {
+  background-color: #b8636d;
+}
+
+.mandarin {
+  background-color: #e6b677;
+}
+
+.blueberry {
+  background-color: #638ba8;
+}
+
+.memento {
+  background-color: #b392ac;
 }

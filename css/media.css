@@ -1,40 +1,43 @@
 /*  SCREEN ADJUSTMENTS   */
 
-@media only screen 
-  and (max-width: 812px) {
-    form {
-        width: 325px;
-        padding: 10px;
-        max-width: 100%;	
-    }
+@media only screen and (max-width: 812px) {
+  form {
+    width: 325px;
+    padding: 10px;
+    max-width: 100%;
+  }
 
-    .input {
-        width: 86%;
-        font-size: 1.1rem;
-    }
+  .input {
+    width: 86%;
+    font-size: 1.1rem;
+  }
 
-    .container {
-        margin-top: 50px;
-    }
+  .container {
+    margin-top: 50px;
+  }
 
-    .todos li {
-        font-size: 1.1rem;
-    }
+  .todos li {
+    font-size: 1.1rem;
+  }
 
-    .loader::after {
-        width: 75px;
-        height: 75px;
-    }
+  .loader::after {
+    width: 75px;
+    height: 75px;
+  }
+
+  button {
+    font-size: 15px; // 17 px
+    padding: 1rem 1.5rem;
+  }
 }
 
-@media only screen 
-  and (min-width: 2000px) {
-    form {
-        width: 600px;
-        max-width: 100%;	
-    }
+@media only screen and (min-width: 2000px) {
+  form {
+    width: 600px;
+    max-width: 100%;
+  }
 
-    .input {
-        width: 92%;
-    }
+  .input {
+    width: 92%;
+  }
 }

@@ -1,4 +1,6 @@
 //  GET TODAYS DATE
+// *
+// *
 
 const date = new Date();
 let day = date.getDate();
@@ -16,7 +18,10 @@ document.getElementById("date").innerHTML = currentDate; // input the name
 
 
 
+
 // NEWLI MAKE A CRAWLABLE
+// *
+// *
 
 var newlist1 = document.querySelector('#newli');
 var newlist2 = document.querySelector('#newli2');
@@ -82,10 +87,56 @@ if(getTheme === "light") {
 }
 
 
-
 // If user prefers light mode in os settings,
 // it will automatically change to light mode
 const lightModePreference = window.matchMedia("(prefers-color-scheme: light)");
 
 // specify event-type as first argument
 lightModePreference.addEventListener("change", e => e.matches && light());
+
+
+
+
+
+
+
+// modal toggle
+// *
+// *
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = button.closest('.modal')
+      closeModal(modal)
+    })
+})
+
+function openModal(modal) {
+    if (modal == null) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+}

@@ -28,6 +28,11 @@ function checklist(){
     if (!localStorage.list2 && localStorage.list1) {
         document.getElementById('newli2').style.display = 'block';
     }
+
+    let favico = JSON.parse(localStorage.getItem('favicon'));
+    if(favico) {
+        changeFavicon(favico);
+    }
 }
 
 
