@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="title" content="memento - todo list">
-    <meta name="description" content="Rapid todo list app for on-the-go creation.">
+    <meta name="description" content="A todo list app for simplifying projects into comprehensible tasks on the go.">
     <meta name="keywords" content="todo, list, help, routines, memento todo list, todo-list, to do list, 
     keep tracks of routine, daily todo list, the todo list, best free todo list app, todo list template, 
     todo relatos, checklist, easy to do list, easy todo list, rapid, todo, list, app, --go, creation, todo list app, todo list google">
@@ -30,18 +30,18 @@
 
     <meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="memento">
-	<meta name="twitter:description" content="Rapid todo list app for on-the-go creation.">
+	<meta name="twitter:description" content="Simplifying projects into comprehensible tasks on the go.">
 	<meta name="twitter:image" content="https://i.imgur.com/oPHJQWZ.png"> 
     <meta name="twitter:site" content="@hvidtfldt">
 
 	<meta property="og:locale" content="en_US">
 	<meta property="og:title" content="memento">
-	<meta property="og:description" content="Rapid todo list app for on-the-go creation.">
+	<meta property="og:description" content="A todo list app for simplifying projects into comprehensible tasks on the go.">
 	<meta property="og:url" content="https://memento.today">
 	<meta property="og:image" content="https://i.imgur.com/oPHJQWZ.png">
 	<meta property="og:type" content="website">
 
-    <link rel="icon" type="image/x-icon" href="/assets/favicon-r.svg">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
 </head>
 <body onload="checklist()"> <!--  ondragstart="return false;" ondrop="return false;"-->
 
@@ -54,12 +54,19 @@
 
 </header>
 
+
+
 <main>
     <!--    LIST 1     -->
     <div class="container">
+        <!-- <hr> -->
         <div class="todow">
-            <a style="cursor: default;" id="date">today's tasks</a>
-            <a class="hovEl" id="clear1" onclick="confirmation()">clear</a>
+                <div class="list-container">
+                    <a class="list-title" style="cursor: default;" id="date">list name...</a>
+                </div>
+            <div>
+                <a class="hovEl" id="clear1" onclick="confirmation()">clear</a>
+            </div>
         </div>
     </div>
 
@@ -82,14 +89,16 @@
 
     <!--    LIST 2     -->
     <div class="tomorrow" id="tmr">
-    <div class="container">
-        <hr>
-        <div class="todow">
-            <a id="nameoflist1" style="cursor: default;">list name...</a>
-            <div>
-                <a class="hovEl" onclick="deletelist()" style="margin-right: 25px;">delete </a>
-                <a class="hovEl" id="clear2" onclick="confirmit()">clear</a>
-            </div>
+        <div class="container">
+            <hr>
+            <div class="todow">
+                <div class="list-container">
+                    <a class="list-title" id="nameoflist1" style="cursor: default;">list name...</a>
+                </div>
+                <div>
+                    <a class="hovEl" onclick="deletelist()" style="margin-right: 25px;">delete </a>
+                    <a class="hovEl" id="clear2" onclick="confirmit()">clear</a>
+                </div>
             </div> 
         </div>
     </div>
@@ -116,28 +125,29 @@
         <div class="container">
             <hr>
             <div class="todow">
-                <a id="nameoflist2" style="cursor: default;">list name...</a>
-                <div>
+                <div class="list-container">
+                    <a class="list-title" id="nameoflist2" style="cursor: default;">list name...</a>
+                </div>
+                <div class="butActions list-container">
                     <a class="hovEl" onclick="deletelist1()" style="margin-right: 25px;">delete </a>
                     <a class="hovEl" id="clear3" onclick="confirmit2()">clear</a>
                 </div>
-                </div> 
-            </div>
+            </div> 
         </div>
+    </div>
     
-        <form id="form2" class="form form2" style="margin-bottom: 3rem;">
-            <input 
-                type="text" 
-                id="input2" 
-                class="input" 
-                placeholder="add a task..." 
-                autocomplete="off"
-                
-            />
-            <ul class="todos" id="todos2" draggable="true" ondragover="allowDrop(event)" ondrop="drop(event)" ondragstart="drag(event)">
-            </ul>
-        </form>
-        </div>
+    <form id="form2" class="form form2" style="margin-bottom: 3rem;">
+        <input 
+            type="text" 
+            id="input2" 
+            class="input" 
+            placeholder="add a task..." 
+            autocomplete="off"
+        />
+        <ul class="todos" id="todos2" draggable="true" ondragover="allowDrop(event)" ondrop="drop(event)" ondragstart="drag(event)">
+        </ul>
+    </form>
+    </div>
 
 
 </main>
@@ -172,10 +182,11 @@
 
             <div class="title">Your themes</div>
             <br>
-            <a class="select hvr" onclick="red()"><button class="crimson">Crimson</button></a>
-            <a class="select hvr" onclick="yellow()"><button class="mandarin">Mandarin</button></a>
-            <a class="select hvr" onclick="blue()"><button class="blueberry">Blueberry</button></a>
             <a class="select hvr" onclick="magenta()"><button class="memento">Memento</button></a>
+            <a class="select hvr" onclick="blue()"><button class="blueberry">Cobalt</button></a>
+            <a class="select hvr" onclick="yellow()"><button class="mandarin">Mandarin</button></a>
+            <a class="select hvr" onclick="red()"><button class="crimson">Crimson</button></a>
+            <a class="select hvr" onclick="grey()"><button class="greyy">Dusk</button></a>
 
             <br />
             <br />
@@ -188,8 +199,12 @@
         </div>
     </div>
     <div id="overlay"></div>
+
+    <!-- <p class="copy">2022 © Memento by <a href="https://magnushvidtfeldt.com" target="_blank"> Magnus Hvidtfeldt</a></p> -->
     
 </footer>
+
+<!-- <canvas id="canvas"></canvas> -->
 
 </body>
 <script src="scripts/script.js" defer></script>

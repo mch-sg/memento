@@ -1,31 +1,47 @@
 body.red {
-  --add: #ddbebe;
-  --dimclr: #ad616a;
+  --add: #dfb0ad; /* #ddbebe */
+  --dimclr: #a15e66;
   --buttonhover: #a7545d;
-  --hclr: #b8636d;
+  --hclr: #cd727c; /* #b8636d */
 }
 
 body.yellow {
-  --add: #dbccb6;
-  --dimclr: #d1945a;
-  --buttonhover: #bd945d;
+  --add: #e1c2ad; /* #dbccb6 */
+  --dimclr: #cb9767;
+  --buttonhover: #b08853;
   --hclr: #e6b677;
 }
 
 body.blue {
-  --dimclr: #3c5f78;
-  --add: #bec9dd;
-  --buttonhover: #3c5f78;
-  --hclr: #638ba8;
+  --dimclr: #54748b;
+  --add: #9cb2c8; /* #bec9dd */
+  --buttonhover: #60849d; /* #3c5f78 */
+  --hclr: #8badc4; /* #638ba8 -- #74a2c2*/
 }
 
 body.magenta {
-  --add: #ddbed6;
-  --dimclr: #a679ae;
-  --buttonhover: #886194;
-  --hclr: #b392ac;
+  --add: #c8b0dc; /* #ddbed6 */
+  --dimclr: #9679a2;
+  --buttonhover: #b785ab; /* #886194 */
+  --hclr: #e1b1d6; /* #b392ac - #dba5cf */
 }
+
+body.grey {
+  --add: #b7bfc9d2;
+  --dimclr: #687986;
+  --buttonhover: #64717c;
+  --hclr: #8a949c;
+}
+
+/* #8a949c */
 
 /* #A679AE / #1d2d44 / #774147 */ /* #A099BC */
 /* #b392ac / #3e5c76 / #a26769 / #B8636D*/
 /* #e0d2ea */
+
+/*   
+  --dimclr: #ad616a;
+  --buttonhover: #774147;
+  --add: #ddbebe;
+  --hclr: #b8636d; 
+*/

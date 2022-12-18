@@ -4,7 +4,6 @@ let containers = document.querySelectorAll('.todos');
 
 
 draggables.forEach(draggable => {
-
     draggable.addEventListener('dragstart', () => {
         draggable.classList.add('dragging');
     });

@@ -7,6 +7,11 @@
     max-width: 100%;
   }
 
+  .container {
+    width: 350px;
+    /* max-width: 100%; */
+  }
+
   .input {
     width: 86%;
     font-size: 1.1rem;
@@ -39,5 +44,10 @@
 
   .input {
     width: 92%;
+  }
+
+  .container {
+    width: 600px;
+    max-width: 100%;
   }
 }

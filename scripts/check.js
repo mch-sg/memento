@@ -33,6 +33,7 @@ function checklist(){
     if(favico) {
         changeFavicon(favico);
     }
+
 }
 
 

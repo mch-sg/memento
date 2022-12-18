@@ -61,12 +61,28 @@ function light() {
     var element = document.body;
     element.classList.toggle("light-theme");
 
+    // var el = document.querySelectorAll('span');
+    // // el.classList.toggle('spanTarget');
+    // var el1 = TodoEl.querySelectorAll('span');
+
+    // for (let i = 0; i < el.length; i++) {
+    //     if(el1[i].classList.contains('completed')) {
+    //         el[i].classList.remove('spanTarget');
+    //     }
+    //     el[i].classList.toggle('spanTarget');
+    // }
+
+
 
     // var
     var theme;
 
     if(element.classList.contains("light-theme")) {
         theme = "light";
+
+        // form ul li span
+        // let folispa = document.getElementsByClassName('spanTarget')[0];
+        // let folispaq = document.querySelectorAll('.spanTarget');
     } else {
         theme = "dark";
     }

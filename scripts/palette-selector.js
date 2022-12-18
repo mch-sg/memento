@@ -41,6 +41,9 @@ if(getPalette === "red") {
     red();
 }
 
+if(getPalette === "grey") {
+    grey();
+}
 
 // var color
 var palette;
@@ -59,6 +62,8 @@ function magenta() {
         element.classList.remove("yellow");
     } else if(element.classList.contains("blue")) {
         element.classList.remove("blue");
+    } else if(element.classList.contains("grey")) {
+        element.classList.remove("grey");
     }
 
     // add the class
@@ -93,6 +98,8 @@ function blue() {
         element.classList.remove("yellow");
     } else if(element.classList.contains("magenta")) {
         element.classList.remove("magenta");
+    } else if(element.classList.contains("grey")) {
+        element.classList.remove("grey");
     }
 
     // add the class
@@ -107,8 +114,10 @@ function blue() {
     localStorage.setItem("palette", JSON.stringify(palette));
 
     // favicon save
-    var favicon = "http://memento.today/assets/favicon-b.svg";
-    changeFavicon('http://memento.today/assets/favicon-b.svg');
+    var favicon = "http://memento.today/assets/favicon-b-2.svg";
+    // http://memento.today/assets/favicon-b.svg
+    // http://127.0.0.1:5500/index.html
+    changeFavicon('http://memento.today/assets/favicon-b-2.svg');
     localStorage.setItem("favicon", JSON.stringify(favicon));
 }
 
@@ -127,6 +136,8 @@ function yellow() {
         element.classList.remove("blue");
     } else if(element.classList.contains("magenta")) {
         element.classList.remove("magenta");
+    } else if(element.classList.contains("grey")) {
+        element.classList.remove("grey");
     }
 
     // add the class
@@ -161,6 +172,8 @@ function red() {
         element.classList.remove("blue");
     } else if(element.classList.contains("magenta")) {
         element.classList.remove("magenta");
+    } else if(element.classList.contains("grey")) {
+        element.classList.remove("grey");
     }
 
     // add the class
@@ -178,5 +191,42 @@ function red() {
     // favicon save
     var favicon = "http://memento.today/assets/favicon-r.svg";
     changeFavicon('http://memento.today/assets/favicon-r.svg');
+    localStorage.setItem("favicon", JSON.stringify(favicon));
+}
+
+
+// grey - palette selector
+// *
+// *
+
+function grey() {
+    var element = document.body;
+    
+    // remove other classes
+    if(element.classList.contains("yellow")) {
+        element.classList.remove("yellow");
+    } else if(element.classList.contains("blue")) {
+        element.classList.remove("blue");
+    } else if(element.classList.contains("magenta")) {
+        element.classList.remove("magenta");
+    } else if(element.classList.contains("red")) {
+        element.classList.remove("red");
+    }
+
+    // add the class
+    element.classList.add("grey");
+
+    // sets the palette if it contains the class for localStorage
+    if(element.classList.contains("grey")) {
+        palette = "grey";
+    } 
+
+    // save localstorage
+    localStorage.setItem("palette", JSON.stringify(palette));
+
+
+    // favicon save
+    var favicon = "http://memento.today/assets/favicon-g.svg";
+    changeFavicon('http://memento.today/assets/favicon-g.svg');
     localStorage.setItem("favicon", JSON.stringify(favicon));
 }

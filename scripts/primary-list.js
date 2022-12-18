@@ -53,6 +53,7 @@ function addTodo(todo) {
 
         // var para = document.createElement('p');
         var spana = document.createElement('span');
+        // spana.classList.add('spanTarget');
 
 
 
@@ -73,6 +74,7 @@ function addTodo(todo) {
         if(todo && todo.completed) {
             TodoEl.classList.add('completed');
             spana.classList.add('completed');
+
         }
 
         TodoEl.innerText = todoText;
@@ -86,6 +88,15 @@ function addTodo(todo) {
                 ding.play(); 
             }
 
+            var el1 = TodoEl.querySelectorAll('span');
+
+            
+            // for (let i = 0; i < el1.length; i++) {
+            //     if(document.body.classList.contains('light-theme')) {
+            //         el1[i].classList.toggle('spanTarget');
+            //     }
+            // }
+            
             updateLS();
         });
 
@@ -97,6 +108,7 @@ function addTodo(todo) {
 
             updateLS();
         });
+        
 
 
         todoUL.appendChild(TodoEl); // label
