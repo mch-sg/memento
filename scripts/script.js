@@ -5,7 +5,7 @@
 const date = new Date();
 let day = date.getDate();
 let year = date.getFullYear(); 
-const months = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+const months = ["jan.","feb.","mar.","apr.","may.","jun.","jul.","aug.","sep.","oct.","nov.","dec."]
 const days = ["sun.", "mon.", "tue.", "wed.", "thu.", "fri.", "sat."];
 
 const d = new Date();

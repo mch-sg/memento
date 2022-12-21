@@ -83,15 +83,15 @@ function updateLS1() {
 
     let todos1 = [];
 
-    todosEl1.forEach((todoEl1) => {
+    todosEl1.forEach((TodoEl1) => {
         todos1.push({
-            text: todoEl1.innerText,
-            completed: todoEl1.classList.contains('completed'),
+            text: TodoEl1.innerText,
+            completed: TodoEl1.classList.contains('completed'),
         });
 
-        localStorage.setItem('todos1', JSON.stringify(todos1));
     });
 
+    localStorage.setItem('todos1', JSON.stringify(todos1));
 }
 
 // CLEAR

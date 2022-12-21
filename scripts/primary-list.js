@@ -40,6 +40,7 @@ function addTodo(todo) {
 
         let abc = document.getElementsByClassName('primlist');
         TodoEl.classList.add('primlist');
+        TodoEl.id = Math.floor(Math.random() * 100000);
 
 
         // checkbox?
@@ -88,7 +89,7 @@ function addTodo(todo) {
                 ding.play(); 
             }
 
-            var el1 = TodoEl.querySelectorAll('span');
+            // var el1 = TodoEl.querySelectorAll('span');
 
             
             // for (let i = 0; i < el1.length; i++) {
@@ -123,6 +124,7 @@ function addTodo(todo) {
 
         input.value = '';
 
+        
     }
 
     updateLS();
@@ -134,15 +136,15 @@ function updateLS() {
 
     let todos = [];
 
-    todosEl.forEach((todoEl) => {
+    todosEl.forEach((TodoEl) => {
         todos.push({
-            text: todoEl.innerText,
-            completed: todoEl.classList.contains('completed'),
+            text: TodoEl.innerText,
+            completed: TodoEl.classList.contains('completed'),
+            id: TodoEl.id,
         });
-
-        localStorage.setItem('todos', JSON.stringify(todos));
     });
-
+    
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 
