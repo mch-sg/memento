@@ -23,15 +23,20 @@
 
   .todos li {
     font-size: 1.1rem;
+    padding: 1rem 1.5rem;
   }
 
   .loader::after {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
   }
 
   button {
     font-size: 15px; // 17 px
+    padding: 1rem 1.5rem;
+  }
+
+  .input {
     padding: 1rem 1.5rem;
   }
 }

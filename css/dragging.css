@@ -12,6 +12,9 @@
 .draggable.dragging {
   opacity: 0.5;
   transform: scale(0.99);
+  border-radius: 10px;
+  background: var(--lihover);
 
-  cursor: none;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }

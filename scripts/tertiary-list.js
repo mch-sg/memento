@@ -88,10 +88,9 @@ function updateLS2() {
             text: todoEl2.innerText,
             completed: todoEl2.classList.contains('completed'),
         });
-
-        localStorage.setItem('todos2', JSON.stringify(todos2));
     });
-
+    
+    localStorage.setItem('todos2', JSON.stringify(todos2));
 }
 
 // CLEAR

@@ -4,7 +4,8 @@ let containers = document.querySelectorAll('.todos');
 
 
 draggables.forEach(draggable => {
-    draggable.addEventListener('dragstart', () => {
+    draggable.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setDragImage(new Image(), 0, 0);
         draggable.classList.add('dragging');
     });
 
