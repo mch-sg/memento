@@ -65,7 +65,7 @@ function addTodo2(todo2) {
 
         label2.innerText = todoText2;
 
-        spana2.addEventListener('click', () => {
+        TodoEl2.addEventListener('click', () => { /* CHANGED FOR TESTING */
             if(document.body.classList.contains('light-theme')) {
                 spana2.classList.add('spanLight');
             }
@@ -91,7 +91,7 @@ function addTodo2(todo2) {
 
         todoUL2.appendChild(TodoEl2);
 
-        TodoEl2.appendChild(spana2); // TodoEl
+        // TodoEl2.appendChild(spana2); // CHANGED FOR TESTING
         TodoEl2.appendChild(label2);
         TodoEl2.appendChild(delcom2);
 

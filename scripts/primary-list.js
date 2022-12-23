@@ -76,7 +76,7 @@ function addTodo(todo) {
         // TodoEl.innerText = todoText;
         label.innerText = todoText;
 
-        spana.addEventListener('click', () => {   /* CHANGED ( TodoEl -> spana )*/
+        TodoEl.addEventListener('click', () => {   /* CHANGED ( TodoEl -> spana ) CHANGED FOR TESTING */
 
             if(document.body.classList.contains('light-theme')) {
                 spana.classList.add('spanLight');
@@ -111,23 +111,13 @@ function addTodo(todo) {
 
         todoUL.appendChild(TodoEl); // label
 
-        // label.appendChild(todoTag); // TodoEl
-        // label.appendChild(para); 
-        TodoEl.appendChild(spana); // TodoEl
+        // TodoEl.appendChild(spana); // CHANGED FOR TESTING (COMMENTING)
         TodoEl.appendChild(label);
         TodoEl.appendChild(delcom);
         
-        // deldiv.appendChild(delcom);
-
-        // todoUL.appendChild(TodoEl);
-
         input.value = '';
 
-        
     }
-
-
-    
 
     updateLS();
 }

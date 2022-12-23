@@ -268,11 +268,15 @@ i {
   transform: translateZ(0);
   translate3d( 0, 0, 0);
 
+  margin-bottom: 5px;
+
   vertical-align: middle;
   text-align: center;
 
   /* border-radius: 10px; */
   transition: 0.2s;
+
+  cursor: pointer;
 }
 
 form ul li.draggable:active {
@@ -308,13 +312,15 @@ form ul li.completed:active {
 }
 
 label {
-  padding-left: 1.5rem;
+  /* padding-left: 1.25rem;   CHANGED FOR TESTING (COMMENTING) */
 
   text-align: left;
   overflow: hidden;
   /* word-wrap: break-word;
   max-width: 100%; */
   font-smooth: always;
+
+  cursor: pointer;
 }
 
 span {

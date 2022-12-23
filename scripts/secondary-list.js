@@ -64,7 +64,7 @@ function addTodo1(todo1) {
 
         label1.innerText = todoText1;
 
-        spana1.addEventListener('click', () => {
+        TodoEl1.addEventListener('click', () => { /* CHANGED FOR TESTING */
 
             if(document.body.classList.contains('light-theme')) {
                 spana1.classList.add('spanLight');
@@ -91,7 +91,7 @@ function addTodo1(todo1) {
 
         todoUL1.appendChild(TodoEl1);
 
-        TodoEl1.appendChild(spana1); // TodoEl
+        // TodoEl1.appendChild(spana1); // CHANGED FOR TESTING
         TodoEl1.appendChild(label1);
         TodoEl1.appendChild(delcom1);
 
