@@ -38,6 +38,20 @@ function addTodo2(todo2) {
     if (todoText2) { 
         let TodoEl2 = document.createElement('li'); 
         TodoEl2.classList.add('terlist');
+        TodoEl2.id = Math.floor(Math.random() * 100000);
+
+        
+        // var para = document.createElement('p');
+        var spana2 = document.createElement('span');
+        spana2.classList.add('spanCheck');
+
+        var label2 = document.createElement('label');
+
+        // var deldiv = document.createElement('div');
+        var delcom2 = document.createElement('span');
+        delcom2.classList.add('destroy');
+
+
 
         // drag and drop
         // *
@@ -46,12 +60,18 @@ function addTodo2(todo2) {
 
         if(todo2 && todo2.completed) {
             TodoEl2.classList.add('completed');
+            spana2.classList.add('completed');
         }
 
-        TodoEl2.innerText = todoText2;
+        label2.innerText = todoText2;
 
-        TodoEl2.addEventListener('click', () => {
+        spana2.addEventListener('click', () => {
+            if(document.body.classList.contains('light-theme')) {
+                spana2.classList.add('spanLight');
+            }
+
             TodoEl2.classList.toggle('completed');
+            spana2.classList.toggle('completed');
 
             if (TodoEl2.classList.contains('completed')) {
                 ding2.play(); 
@@ -62,7 +82,7 @@ function addTodo2(todo2) {
 
 
 
-        TodoEl2.addEventListener('contextmenu', (e) => {
+        delcom2.addEventListener('click', (e) => {
             e.preventDefault();
             TodoEl2.remove();
 
@@ -70,6 +90,10 @@ function addTodo2(todo2) {
         });
 
         todoUL2.appendChild(TodoEl2);
+
+        TodoEl2.appendChild(spana2); // TodoEl
+        TodoEl2.appendChild(label2);
+        TodoEl2.appendChild(delcom2);
 
         input2.value = '';
     }

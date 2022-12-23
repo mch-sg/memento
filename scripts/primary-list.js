@@ -42,12 +42,6 @@ function addTodo(todo) {
         TodoEl.classList.add('primlist');
         TodoEl.id = Math.floor(Math.random() * 100000);
 
-
-        // checkbox?
-        let todoTag = document.createElement('input');
-        todoTag.type = "checkbox";
-        todoTag.name = "";
-        // todoTag.id = "id";
         
         // var para = document.createElement('p');
         var spana = document.createElement('span');

@@ -37,7 +37,7 @@ body.light-theme {
 
   --w: #3e3e3e;
   --sekclr: #0e0e0ebf;
-  --dim: #00000044;
+  --dim: #00000037;
   --smallclr: #15151555;
 }
 
@@ -292,7 +292,7 @@ form ul li.completed:active {
 
 .todos li:hover span.destroy {
   /* color: var(--dimclr); */
-  /* background-color: var(--minclr); */
+  /* background-color: var(--lihover); */
 }
 
 

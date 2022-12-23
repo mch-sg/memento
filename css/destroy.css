@@ -43,6 +43,7 @@ li .destroy {
   display: none;
   font-size: 30px;
   font-weight: 200;
+  /* background-color: var(--minclr); */
 
   position: absolute;
   /* top: -5px;
@@ -68,10 +69,10 @@ li .destroy {
   padding: 0;
 
   border-radius: 50%;
-  float: right;
+  margin-bottom: 15px;
 
-  align-items: center;
-  vertical-align: middle;
+  /* align-items: center;
+  vertical-align: middle; */
 
   transition: 0.2s;
 }
@@ -84,6 +85,7 @@ li .destroy {
 
 li .destroy:hover {
   color: var(--buttonhover);
+  /* background-color: var(--lihover); */
 }
 
 /* li button {
@@ -114,10 +116,7 @@ li .destroy:after {
   content: "×";
 }
 
-li.destroy:hover {
-  color: #af5b5e;
-}
-
 li:hover .destroy {
   display: block;
+  /* background-color: var(--lihover); */
 }

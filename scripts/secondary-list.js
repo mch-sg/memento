@@ -38,6 +38,19 @@ function addTodo1(todo1) {
     if (todoText1) { 
         let TodoEl1 = document.createElement('li'); 
         TodoEl1.classList.add('seclist');
+        TodoEl1.id = Math.floor(Math.random() * 100000);
+
+        // var para = document.createElement('p');
+        var spana1 = document.createElement('span');
+        spana1.classList.add('spanCheck');
+
+        var label1 = document.createElement('label');
+
+        // var deldiv = document.createElement('div');
+        var delcom1 = document.createElement('span');
+        delcom1.classList.add('destroy');
+
+
 
         // drag and drop
         // *
@@ -46,12 +59,19 @@ function addTodo1(todo1) {
 
         if(todo1 && todo1.completed) {
             TodoEl1.classList.add('completed');
+            spana1.classList.add('completed');
         }
 
-        TodoEl1.innerText = todoText1;
+        label1.innerText = todoText1;
 
-        TodoEl1.addEventListener('click', () => {
+        spana1.addEventListener('click', () => {
+
+            if(document.body.classList.contains('light-theme')) {
+                spana1.classList.add('spanLight');
+            }
+
             TodoEl1.classList.toggle('completed');
+            spana1.classList.toggle('completed');
 
             if (TodoEl1.classList.contains('completed')) {
                 ding1.play(); 
@@ -62,7 +82,7 @@ function addTodo1(todo1) {
 
 
 
-        TodoEl1.addEventListener('contextmenu', (e) => {
+        delcom1.addEventListener('click', (e) => {
             e.preventDefault();
             TodoEl1.remove();
 
@@ -70,6 +90,10 @@ function addTodo1(todo1) {
         });
 
         todoUL1.appendChild(TodoEl1);
+
+        TodoEl1.appendChild(spana1); // TodoEl
+        TodoEl1.appendChild(label1);
+        TodoEl1.appendChild(delcom1);
 
         input1.value = '';
     }
