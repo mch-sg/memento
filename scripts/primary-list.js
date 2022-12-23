@@ -4,7 +4,7 @@
 
 
 // music load
-const ding = new Audio('assets/complete.mp3');
+var ding = new Audio('assets/complete.mp3');
 ding.volume = 0.3;
 
 // todo load
@@ -48,6 +48,7 @@ function addTodo(todo) {
         spana.classList.add('spanCheck');
 
         var label = document.createElement('label');
+        label.classList.add('todo-text');
 
         // var deldiv = document.createElement('div');
         var delcom = document.createElement('span');
@@ -77,7 +78,6 @@ function addTodo(todo) {
         label.innerText = todoText;
 
         TodoEl.addEventListener('click', () => {   /* CHANGED ( TodoEl -> spana ) CHANGED FOR TESTING */
-
             if(document.body.classList.contains('light-theme')) {
                 spana.classList.add('spanLight');
             }
@@ -85,7 +85,7 @@ function addTodo(todo) {
             TodoEl.classList.toggle('completed');
             spana.classList.toggle('completed');
 
-            if (TodoEl.classList.contains('completed')) {
+            if (TodoEl.classList.contains('completed') && !delcom.classList.contains('nosound')) {
                 ding.play(); 
             }
             
@@ -101,8 +101,10 @@ function addTodo(todo) {
         //     updateLS();
         // });
 
-        delcom.addEventListener('click', () => {
-            // e.preventDefault();
+        delcom.addEventListener('click', (e) => {
+            delcom.classList.add('nosound');
+
+            e.preventDefault();
             TodoEl.remove();
 
             updateLS();
