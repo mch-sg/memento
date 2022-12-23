@@ -48,13 +48,13 @@ function addTodo(todo) {
         todoTag.type = "checkbox";
         todoTag.name = "";
         // todoTag.id = "id";
-
-        var label = document.createElement('label');
-        label.htmlFor = "id";
-
+        
         // var para = document.createElement('p');
         var spana = document.createElement('span');
         // spana.classList.add('spanTarget');
+
+        var label = document.createElement('label');
+        // label.htmlFor = "id";
 
 
 
@@ -78,8 +78,8 @@ function addTodo(todo) {
 
         }
 
-        TodoEl.innerText = todoText;
-        // para.innerText = todoText;
+        // TodoEl.innerText = todoText;
+        label.innerText = todoText;
 
         TodoEl.addEventListener('click', () => {
             TodoEl.classList.toggle('completed');
@@ -114,10 +114,10 @@ function addTodo(todo) {
 
         todoUL.appendChild(TodoEl); // label
 
-        // TodoEl.appendChild(label); // todoTag
         // label.appendChild(todoTag); // TodoEl
         // label.appendChild(para); 
         TodoEl.appendChild(spana); // TodoEl
+        TodoEl.appendChild(label);
         // spanfirst.appendChild(spana); // TodoEl
 
         // todoUL.appendChild(TodoEl);

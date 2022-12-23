@@ -55,6 +55,11 @@
   font-weight: 300;
 }
 
+.close-button:hover {
+  /* color: var(--dimclr); */
+  opacity: 0.7;
+}
+
 .modal-body {
   font-family: "Inter", sans-serif;
   font-size: 1.25rem;

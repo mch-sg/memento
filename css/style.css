@@ -41,7 +41,7 @@ body.light-theme {
 }
 
 * {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   text-decoration: none;
   transition: 0.2s;
 
@@ -232,29 +232,35 @@ form {
   margin: auto;
   padding: 0;
   list-style-type: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   /* border: 1px solid #FFFFFF0A; */
   border-radius: 10px;
-  vertical-align: middle;
 
   overflow: hidden;
   word-wrap: break-word;
 }
 
 .todos li {
-  /* transition: 0.2s; */
   color: var(--sekclr);
   text-align: left;
   border-top: 1px solid var(--borderclr);
   /* border-radius: 10px; */
   background-color: var(--minclr);
   font-size: 1.25rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1.5rem 1.5rem;
 
   overflow: hidden;
   word-wrap: break-word;
   max-width: 100%;
+
   font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  translate3d( 0, 0, 0);
+
+  vertical-align: middle;
+  text-align: center;
 
   /* border-radius: 10px; */
 }
@@ -268,16 +274,35 @@ form ul li.completed:active {
 }
 
 .todos li:hover {
-  color: var(--dimclr);
+  /* color: var(--dimclr); */
   background-color: var(--lihover);
   transform: scale(0.99);
   border-radius: 10px;
+
+}
+
+.todos li:hover label {
+  color: var(--dimclr);
+  font-smooth: auto;
+}
+
+.todos li.completed label { 
+  color: var(--dim);
+  text-decoration: line-through;
+}
+
+label {
+  padding-left: 1.5rem;
+
+  text-align: left;
+  overflow: hidden;
+  /* word-wrap: break-word;
+  max-width: 100%; */
   font-smooth: always;
 }
 
-.todos li.completed {
-  color: var(--dim);
-  text-decoration: line-through;
+span {
+  cursor: pointer;
 }
 
 .dateList {
@@ -303,7 +328,7 @@ form ul li.completed:active {
   /* border: 1px solid #ffffff; */
   padding: 5px;
 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .list-container {
