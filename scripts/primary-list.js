@@ -51,11 +51,13 @@ function addTodo(todo) {
         
         // var para = document.createElement('p');
         var spana = document.createElement('span');
-        // spana.classList.add('spanTarget');
+        spana.classList.add('spanCheck');
 
         var label = document.createElement('label');
-        // label.htmlFor = "id";
 
+        // var deldiv = document.createElement('div');
+        var delcom = document.createElement('span');
+        delcom.classList.add('destroy');
 
 
         // drag and drop
@@ -75,41 +77,42 @@ function addTodo(todo) {
         if(todo && todo.completed) {
             TodoEl.classList.add('completed');
             spana.classList.add('completed');
-
         }
 
         // TodoEl.innerText = todoText;
         label.innerText = todoText;
 
-        TodoEl.addEventListener('click', () => {
+        spana.addEventListener('click', () => {   /* CHANGED ( TodoEl -> spana )*/
+
+            if(document.body.classList.contains('light-theme')) {
+                spana.classList.add('spanLight');
+            }
+
             TodoEl.classList.toggle('completed');
             spana.classList.toggle('completed');
 
             if (TodoEl.classList.contains('completed')) {
                 ding.play(); 
             }
-
-            // var el1 = TodoEl.querySelectorAll('span');
-
-            
-            // for (let i = 0; i < el1.length; i++) {
-            //     if(document.body.classList.contains('light-theme')) {
-            //         el1[i].classList.toggle('spanTarget');
-            //     }
-            // }
             
             updateLS();
         });
 
 
 
-        TodoEl.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
+        // delcom.addEventListener('contextmenu', (e) => {
+        //     e.preventDefault();
+        //     TodoEl.remove();
+
+        //     updateLS();
+        // });
+
+        delcom.addEventListener('click', () => {
+            // e.preventDefault();
             TodoEl.remove();
 
             updateLS();
         });
-        
 
 
         todoUL.appendChild(TodoEl); // label
@@ -118,7 +121,9 @@ function addTodo(todo) {
         // label.appendChild(para); 
         TodoEl.appendChild(spana); // TodoEl
         TodoEl.appendChild(label);
-        // spanfirst.appendChild(spana); // TodoEl
+        TodoEl.appendChild(delcom);
+        
+        // deldiv.appendChild(delcom);
 
         // todoUL.appendChild(TodoEl);
 
@@ -126,6 +131,9 @@ function addTodo(todo) {
 
         
     }
+
+
+    
 
     updateLS();
 }

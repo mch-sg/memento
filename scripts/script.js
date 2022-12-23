@@ -36,8 +36,6 @@ newlist2.addEventListener("click", function onclick(event) {
 
 
 
-
-
 // toggle light mode
 // *
 // *
@@ -61,17 +59,18 @@ function light() {
     var element = document.body;
     element.classList.toggle("light-theme");
 
-    // var el = document.querySelectorAll('span');
-    // // el.classList.toggle('spanTarget');
-    // var el1 = TodoEl.querySelectorAll('span');
+    // var getSpan = document.querySelector('spanCheck'); /* document.querySelectorAll('.spanCheck') */
 
-    // for (let i = 0; i < el.length; i++) {
-    //     if(el1[i].classList.contains('completed')) {
-    //         el[i].classList.remove('spanTarget');
-    //     }
-    //     el[i].classList.toggle('spanTarget');
+    // for(let i = 0; i < getSpan.length; i++) {
+    // getSpan.classList.toggle("spanLight");
     // }
 
+    
+    var el1 = document.querySelectorAll('.spanCheck');
+
+    for (let i = 0; i < el1.length; i++) {
+        el1[i].classList.toggle('spanLight');
+    }
 
 
     // var

@@ -5,6 +5,7 @@
 :root {
   --fw: 300;
   --lihover: #19191a; /* #101113 */
+  --lihover2:#0F0F10; 
   --smallclr: #f5f5f555;
   --borderclr: #ffffff0a;
   --hrc: #ffffff12;
@@ -43,7 +44,7 @@ body.light-theme {
 * {
   /* margin-bottom: 5px; */
   text-decoration: none;
-  transition: 0.2s;
+  /* transition: 0.2s; */
 
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale;
@@ -58,6 +59,7 @@ hr {
 /*  PRIMARY  */
 
 body {
+  transition: 0.2s;
   font-family: "Raleway", "Inter", sans-serif;
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum";
@@ -69,11 +71,6 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
-  /* align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  display: flex; */
 }
 
 .centerMain {
@@ -107,6 +104,7 @@ p {
   font-weight: 400;
   font-size: 17px;
   color: var(--sekclr); // #0000006F
+  transition: 0.2s;
 }
 
 h1 a {
@@ -117,7 +115,7 @@ h1 a {
   font-size: 65px;
   color: var(--hclr);
   padding-top: 5px;
-  /* transition: 0.2s; */
+  transition: 0.2s;
 }
 h1 a:hover {
   color: var(--buttonhover);
@@ -126,8 +124,8 @@ h1 a:hover {
 
 p a {
   color: var(--add);
-  /* transition: 0.2s; */
   cursor: pointer;
+  transition: 0.2s;
 }
 
 p a:hover {
@@ -141,14 +139,13 @@ div a {
 
 a {
   color: var(--w);
-  /* transition: 0.2s; */
   cursor: pointer;
 }
 
 .hovEl {
   color: var(--add);
-  /* transition: 0.2s; */
   cursor: pointer;
+  transition: 0.2s;
 }
 .hovEl:hover {
   color: var(--dimclr);
@@ -160,6 +157,7 @@ small {
   font-weight: 500;
   font-size: 12px;
   color: var(--smallclr);
+  transition: 0.2s;
 }
 
 main {
@@ -178,6 +176,7 @@ header {
   color: var(--bclr);
   width: 500px;
   max-width: 100%;
+  transition: 0.2s;
 }
 
 form {
@@ -193,6 +192,8 @@ form {
   border-radius: 10px;
   backdrop-filter: blur(7.9px);
   -webkit-backdrop-filter: blur(7.9px); */
+
+  transition: 0.2s;
 }
 
 .input {
@@ -210,6 +211,12 @@ form {
 
   overflow: hidden;
   word-wrap: break-word;
+
+  transition: 0.2s;
+}
+
+i {
+  transition: 0.2s;
 }
 
 .input::placeholder {
@@ -232,12 +239,14 @@ form {
   margin: auto;
   padding: 0;
   list-style-type: none;
-  /* cursor: pointer; */
+  /* cursor: pointer; */ /* THE REAL CURSOR */
   /* border: 1px solid #FFFFFF0A; */
   border-radius: 10px;
 
   overflow: hidden;
   word-wrap: break-word;
+
+  transition: 0.2s;
 }
 
 .todos li {
@@ -263,6 +272,7 @@ form {
   text-align: center;
 
   /* border-radius: 10px; */
+  transition: 0.2s;
 }
 
 form ul li.draggable:active {
@@ -278,8 +288,13 @@ form ul li.completed:active {
   background-color: var(--lihover);
   transform: scale(0.99);
   border-radius: 10px;
-
 }
+
+.todos li:hover span.destroy {
+  /* color: var(--dimclr); */
+  /* background-color: var(--minclr); */
+}
+
 
 .todos li:hover label {
   color: var(--dimclr);
@@ -287,6 +302,7 @@ form ul li.completed:active {
 }
 
 .todos li.completed label { 
+  transition: 0.2s;
   color: var(--dim);
   text-decoration: line-through;
 }
@@ -384,7 +400,7 @@ span {
 /* home page */
 /* buttons */
 
-button {
+a button {
   font-family: "Inter", sans-serif;
   font-size: 17px;
   border: none;
@@ -398,12 +414,12 @@ button {
   /* box-shadow: 0 0px 10px var(--hclr); */
 }
 
-button:hover {
+a button:hover {
   background-color: var(--buttonhover);
   transform: scale(0.99);
 }
 
-button:active {
+a button:active {
   /* background-color: #735d78; */
   transform: scale(0.92);
 }
@@ -510,15 +526,7 @@ i {
   background-color: #8a949c;
 }
 
---hclr: #cd727c;
--hclr: #e6b677;
---hclr: #74a2c2;
---hclr: #dba5cf;
 
-canvas {
-  /* height: 100vh; */
-  pointer-events: none;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
+.list-title {
+  transition: 0.2s;
 }
