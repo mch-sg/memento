@@ -15,44 +15,11 @@ li button {
 }
 
 li .destroy {
-  /* display: none; */
-
-  /* position: relative;
-  top: 0;
-  right: 15px;
-  bottom: 5px;
-  width: 40px;
-  height: 40px;
-  margin: auto 0;
-  font-size: 30px;
-  color: var(--sekclr);
-  margin-bottom: 11px;
-  transition: 0.2s ease-out;
-  cursor: pointer;
-  font-weight: 200;
-
-  background: red;
-  float: right; */
-}
-
-li .destroy {
-  /* display: block;
-  width: 25px;
-  height: 25px; */
-
   display: none;
   font-size: 30px;
   font-weight: 200;
-  /* background-color: var(--minclr); */
 
   position: absolute;
-  /* top: -5px;
-  right: 20px;
-  bottom: 0px;
-
-  width: 25px;
-  height: 25px; */
-
   top: 0;
   right: 10px;
   bottom: 0;
@@ -76,12 +43,6 @@ li .destroy {
 
   transition: 0.2s;
 }
-
-/* li div {
-  width: 25px;
-  height: 25px;
-  background: white;
-} */
 
 li .destroy:hover {
   color: var(--buttonhover);

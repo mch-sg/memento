@@ -73,7 +73,7 @@ function addTodo2(todo2) {
             TodoEl2.classList.toggle('completed');
             spana2.classList.toggle('completed');
 
-            if (TodoEl2.classList.contains('completed')) {
+            if (TodoEl2.classList.contains('completed') && !delcom2.classList.contains('nosound')) {
                 ding2.play(); 
             }
 
@@ -83,6 +83,7 @@ function addTodo2(todo2) {
 
 
         delcom2.addEventListener('click', (e) => {
+            delcom2.classList.add('nosound');
             e.preventDefault();
             TodoEl2.remove();
 
@@ -97,6 +98,63 @@ function addTodo2(todo2) {
 
         input2.value = '';
     }
+
+
+
+    // drag and drop
+    // *
+    // *
+    let draggables = document.querySelectorAll('.draggable');
+    let containers = document.querySelectorAll('.todos');
+
+    draggables.forEach(draggable => {
+        draggable.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setDragImage(new Image(), 0, 0);
+            draggable.classList.add('dragging');
+        });
+
+        draggable.addEventListener('dragend', () => {
+            draggable.classList.remove('dragging');
+        });
+    });
+
+    containers.forEach(container => {
+        container.addEventListener('dragover', e => {
+            e.preventDefault();
+            let afterElement = getDragAfterElement(container, e.clientY);
+            let draggable = document.querySelectorAll('.dragging');
+            if (afterElement == null) {
+                draggable.forEach(draggabl => {
+                    container.appendChild(draggabl);
+                    updateLS(); 
+                    updateLS1(); 
+                    updateLS2();
+                })
+            } else {
+                draggable.forEach(draggabl => {
+                    container.insertBefore(draggabl, afterElement);
+                    updateLS(); 
+                    updateLS1(); 
+                    updateLS2();
+                })
+            }
+        });
+    })
+
+    function getDragAfterElement(container, y) {
+        let draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')];
+
+        return draggableElements.reduce((closest, child) => {
+            let box = child.getBoundingClientRect();
+            let offset = y - box.top - box.height / 2;
+            if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child }
+            } else {
+                return closest
+            }
+        }, { offset: Number.NEGATIVE_INFINITY }).element
+    }
+
 
     updateLS2();
 }
@@ -123,7 +181,6 @@ let cleared2 = 0;
 
 function clearthis2() {
     cleared2 = 1;
-    console.log('clear2');
     localStorage.removeItem('todos2');
     todoUL2.innerHTML = '';
     updateLS2();

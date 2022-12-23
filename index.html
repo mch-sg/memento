@@ -88,7 +88,7 @@
     </form>
 
     <!-- NEW LIST 1 -->
-    <a id="newli" class="newli hovEl"><button>new list<br/></button></a>
+    <a id="newli" data-modal-target="#modal2" class="newli hovEl"><button>new list<br/></button></a>
 
     <!--    LIST 2     -->
     <div class="tomorrow" id="tmr">
@@ -113,15 +113,14 @@
             class="input" 
             placeholder="add a task..." 
             autocomplete="off"
-            
         />
         <ul class="todos" id="todos1">
         </ul>
     </form>
     </div>
 
-    <!-- NEW LIST 2 -->
-    <a id="newli2" class="newli hovEl"><button>new list<br/></button></a>
+    <!-- NEW LIST 2 id="newli2" -->
+    <a id="newli2" data-modal-target="#modal1" class="newli hovEl"><button>new list<br/></button></a>
 
     <!--    LIST 3     -->
     <div class="tomorrow" id="tmr1">
@@ -152,7 +151,6 @@
     </form>
     </div>
 
-
 </main>
 
 <footer class="centerFooter" style="margin-bottom: 5rem">
@@ -160,9 +158,9 @@
         <br />
         <br />
         <br />
-        Left click to toggle complete. Left click and drag to reorder.
+        Left click to toggle complete. Left click and
         <br />
-        Right click to delete the todo.
+        drag to reorder.
     </small>
     <br />
     <br />
@@ -174,7 +172,7 @@
     <!-- <i class="bi bi-bookmark-heart-fill bri" style="margin-left: 20px;"></i> -->
 
 
-    <!-- modal -->
+    <!-- settings modal -->
     <div class="modal" id="modal">
         <div class="modal-header">
             <div class="title">Settings</div>
@@ -207,14 +205,76 @@
     
 </footer>
 
-<!-- <canvas id="canvas"></canvas> -->
+
+<!-- prompt modal 1 -->
+<div class="modal" id="modal1">
+    <div class="modal-header">
+        <div class="title">What would you like to call your list?</div>
+        <!-- <button data-close-button class="close-button"></button> -->
+        <i class="bi bi-x close-button" data-close-button></i>
+    </div>
+    <div class="modal-body">
+
+        <!-- <div class="title">What would you like to call your new list?</div> -->
+        <p style="text-align: left;margin-top:-5px;opacity:0.8;">
+            This will be the name of your new list.
+        </p>
+
+        <input 
+            type="text" 
+            id="input3" 
+            placeholder="e.g. Issues to solve..." 
+            autocomplete="off"
+            onkeypress="clickPress(event)"
+        >
+
+        <div class="modal-spc">
+            <button class="modal-btn" id="promptCancel">Cancel</button>
+            <button class="modal-btn" id="promptConfirm">Confirm</button>
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+
+
+
+<!-- prompt modal 2 -->
+<div class="modal" id="modal2">
+    <div class="modal-header">
+        <div class="title">What would you like to call your list?</div>
+        <!-- <button data-close-button class="close-button"></button> -->
+        <i class="bi bi-x close-button" data-close-button></i>
+    </div>
+    <div class="modal-body">
+
+        <!-- <div class="title">What would you like to call your new list?</div> -->
+        <p style="text-align: left;margin-top:-5px;opacity:0.8;">
+            This will be the name of your new list.
+        </p>
+
+        <input 
+            type="text" 
+            id="input4" 
+            placeholder="e.g. Issues to solve..." 
+            autocomplete="off"
+            onkeypress="clickPress2(event)"
+        />
+
+        <div class="modal-spc">
+            <button class="modal-btn" id="promptCancel2">Cancel</button>
+            <button class="modal-btn" id="promptConfirm2">Confirm</button>
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+
+
 
 </body>
 <script src="scripts/script.js" defer></script>
 <script src="scripts/primary-list.js"></script>
 <script src="scripts/secondary-list.js"></script>
 <script src="scripts/tertiary-list.js"></script>
-<script src="scripts/draggable.js" defer></script>
 <script src="scripts/palette-selector.js"></script>
 <link rel="stylesheet" href="css/palette-selector.css">
 
