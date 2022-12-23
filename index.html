@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- 
+    @author: Magnus Hvidtfeldt
+    @author-website: https://magnushvidtfeldt.com
+    @website: https://memento.today
+ -->
 <html lang="en">
 <head>
     <title>memento - todo list</title>
@@ -48,13 +53,13 @@
 
 <div id="preloader" class="loader"></div>
 
+
 <header style="text-align: center;">
     <h1>memento</h1>
     <p style="margin-top: -35px;">by <a href="https://magnushvidtfeldt.com" target="_blank">Magnus Hvidtfeldt</a>
     <p>rapid todo list app on-the-go.<br> suggestions? <a href="https://twitter.com/hvidtfldt" target="_blank">tweet me.</a></p>
 
 </header>
-
 
 
 <main class="centerMain">
@@ -153,14 +158,16 @@
 
 </main>
 
+
+
 <footer class="centerFooter" style="margin-bottom: 5rem">
     <small>
         <br />
         <br />
         <br />
-        Left click to toggle complete. Left click and
+        Left click to toggle complete. Left click and drag to reorder.
         <br />
-        drag to reorder.
+        Hover over a task to see the delete button.
     </small>
     <br />
     <br />
@@ -169,41 +176,33 @@
 
     <i data-modal-target="#modal" class="bi bi-gear-fill bri popup" style="margin-left: 20px"></i> <!-- bi bi-gear-fill - bi bi-palette-fill -->
 
-    <!-- <i class="bi bi-bookmark-heart-fill bri" style="margin-left: 20px;"></i> -->
-
-
-    <!-- settings modal -->
-    <div class="modal" id="modal">
-        <div class="modal-header">
-            <div class="title">Settings</div>
-            <!-- <button data-close-button class="close-button"></button> -->
-            <i class="bi bi-x close-button" data-close-button></i>
-        </div>
-        <div class="modal-body">
-
-            <div class="title">Your themes</div>
-            <br>
-            <a class="select hvr" onclick="magenta()"><button class="memento">Memento</button></a>
-            <a class="select hvr" onclick="blue()"><button class="blueberry">Cobalt</button></a>
-            <a class="select hvr" onclick="yellow()"><button class="mandarin">Mandarin</button></a>
-            <a class="select hvr" onclick="red()"><button class="crimson">Crimson</button></a>
-            <a class="select hvr" onclick="grey()"><button class="greyy">Dusk</button></a>
-
-            <br />
-            <!-- <br />
-            <br />
-            <br />
-            <div class="title">Date & Time</div>
-            <br />
-            <p style="text-align: left;margin-top:-5px;opacity:0.8;">Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Possimus tempora pariatur aspernatur. Sequi, voluptatibus quae.</p> -->
-        </div>
-    </div>
-    <div id="overlay"></div>
 
     <!-- <p class="copy">2022 © Memento by <a href="https://magnushvidtfeldt.com" target="_blank"> Magnus Hvidtfeldt</a></p> -->
-    
 </footer>
+
+
+
+<!-- settings modal -->
+<div class="modal" id="modal">
+    <div class="modal-header">
+        <div class="title">Settings</div>
+        <!-- <button data-close-button class="close-button"></button> -->
+        <i class="bi bi-x close-button" data-close-button></i>
+    </div>
+    <div class="modal-body">
+
+        <div class="title">Your themes</div>
+        <br>
+        <a class="select hvr" onclick="magenta()"><button class="memento">Memento</button></a>
+        <a class="select hvr" onclick="blue()"><button class="blueberry">Cobalt</button></a>
+        <a class="select hvr" onclick="yellow()"><button class="mandarin">Mandarin</button></a>
+        <a class="select hvr" onclick="red()"><button class="crimson">Crimson</button></a>
+        <a class="select hvr" onclick="grey()"><button class="greyy">Dusk</button></a>
+
+        <br />
+    </div>
+</div>
+<div id="overlay"></div>
 
 
 <!-- prompt modal 1 -->

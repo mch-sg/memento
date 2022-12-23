@@ -18,24 +18,6 @@ document.getElementById("date").innerHTML = currentDate; // input the name
 
 
 
-
-// NEWLI MAKE A CRAWLABLE
-// *
-// *
-
-// var newlist1 = document.querySelector('#newli');
-// var newlist2 = document.querySelector('#newli2');
-
-// newlist1.addEventListener("click", function onclick(event) {
-//     newbox();
-// });
-
-// newlist2.addEventListener("click", function onclick(event) {
-//     newbox1();
-// });
-
-
-
 // toggle light mode
 // *
 // *
