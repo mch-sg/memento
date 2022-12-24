@@ -1,7 +1,7 @@
 // NEWLI 1
 
 function checklist(){ 
-    
+
     // NEWLI 1
     let nameoflist1 = localStorage.getItem('nameoflist1');
     

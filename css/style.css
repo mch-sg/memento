@@ -22,7 +22,7 @@
   --minclr: #101010; // #141618 // #d1b3c4 // #0B0B0D // #101113    &&    #2a2b2c
   --bclr: #0000006f;
   --b: #020202; /* #030304 / #020202 / #000 */ /* #010101 */ /* #060606 */
-  --dim: #ffffff44; // #00000041
+  --dim: #FFFFFF3C; // #00000041
 }
 
 body.light-theme {
@@ -42,6 +42,69 @@ body.light-theme {
   --dim: #00000037;
   --smallclr: #15151555;
 }
+
+
+
+/*  PRELOADER  */
+#preloader {
+  background-color: var(--b);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+
+  top: 0;
+  left: 0;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loader::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 85px;
+  border: 4px solid var(--loaderclr);
+  border-top-color: var(--hclr);
+  border-radius: 50%;
+  /* background: #fff; */
+  margin: 8px;
+  animation: loading 0.75s infinite linear;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bri {
+  /* transition: 0.2s; */
+  color: var(--add);
+}
+.bri:hover {
+  color: var(--dimclr);
+}
+
+#toggleLight {
+  cursor: pointer;
+}
+
+
+/* ALL * */
 
 * {
   /* margin-bottom: 5px; */
@@ -182,7 +245,7 @@ header {
 }
 
 form {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.075); /* rgba(127, 127, 127, 0.075) */
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05); /* rgba(127, 127, 127, 0.075) */
   margin: auto;
   width: 500px;
   max-width: 100%;
@@ -208,7 +271,7 @@ form {
   border: none;
   font-size: 1.25rem;
   /* border: 1px solid #FFFFFF0A; */
-  padding: 1.5rem 1.5rem;
+  padding: 1.35rem 1.5rem;
   display: block;
 
   overflow: hidden;
@@ -263,7 +326,7 @@ i {
   /* border-radius: 10px; */
   background-color: var(--minclr);
   font-size: 1.25rem;
-  padding: 1.5rem 1.5rem;
+  padding: 1.35rem 1.5rem;
 
   overflow: hidden;
   word-wrap: break-word;
@@ -318,8 +381,8 @@ form ul li.completed:active {
   text-decoration: line-through;
 }
 
-label {
-  /* padding-left: 1.25rem;   CHANGED FOR TESTING (COMMENTING) */
+label { /* CHANGED FOR TESTING (ADDED .primlist) */
+  /* padding-left: 1.25rem; /*  CHANGED FOR TESTING (COMMENTING) */
 
   text-align: left;
   overflow: hidden;
@@ -446,64 +509,6 @@ a button:hover {
 a button:active {
   /* background-color: #735d78; */
   transform: scale(0.92);
-}
-
-/* preloader */
-#preloader {
-  background-color: var(--b);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-  padding: 0;
-  margin: 0;
-
-  top: 0;
-  left: 0;
-
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  transition: opacity 0.5s, visibility 0.5s;
-}
-
-.loader::after {
-  content: "";
-  display: block;
-  width: 85px;
-  height: 85px;
-  border: 4px solid var(--loaderclr);
-  border-top-color: var(--hclr);
-  border-radius: 50%;
-  /* background: #fff; */
-  margin: 8px;
-  animation: loading 0.75s infinite linear;
-}
-
-@keyframes loading {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loader--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.bri {
-  /* transition: 0.2s; */
-  color: var(--add);
-}
-.bri:hover {
-  color: var(--dimclr);
-}
-
-#toggleLight {
-  cursor: pointer;
 }
 
 i {

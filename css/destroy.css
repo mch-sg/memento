@@ -19,6 +19,8 @@ li .destroy {
   font-size: 30px;
   font-weight: 200;
 
+  opacity: 0.5;
+
   position: absolute;
   top: 0;
   right: 10px;
@@ -36,7 +38,7 @@ li .destroy {
   padding: 0;
 
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 13px; /* 15px + todos li padding 1.5 // 13px todos li padding 1.35 */
 
   /* align-items: center;
   vertical-align: middle; */

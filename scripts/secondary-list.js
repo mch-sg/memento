@@ -4,7 +4,7 @@
 
 
 // music load
-const ding1 = new Audio('assets/complete.mp3');
+const ding1 = new Audio('assets/sounds/complete.mp3');
 ding1.volume = 0.3;
 
 // todo load

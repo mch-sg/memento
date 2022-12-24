@@ -4,7 +4,7 @@
 
 
 // music load
-var ding = new Audio('assets/complete.mp3');
+var ding = new Audio('assets/sounds/complete.mp3');
 ding.volume = 0.3;
 
 // todo load
@@ -63,9 +63,9 @@ function addTodo(todo) {
 
         // editable content
         // *
-        // TodoEl.setAttribute("contentEditable", true);
-        // if(TodoEl.classList.contains('toedit')) {
-        //     TodoEl.setAttribute("contentEditable", true);
+        // label.setAttribute("contentEditable", true);
+        // if(label.classList.contains('toedit')) {
+        //     label.setAttribute("contentEditable", true);
         // }
 
 
@@ -209,26 +209,6 @@ function updateLS() {
 // // If disabled, save text
 // if(!list.contentEditable === 'false') {
 //     localStorage.setItem('content', plist2.innerHTML);
-// }
-
-
-
-
-// edit button
-// *
-
-// function editthis() {
-//     let aa = document.getElementsByClassName('todos')[0];
-//     let editme = document.createElement('img'); 
-    
-//     for (var i = 0; i < abc.length; i++) {
-//         abc[i].classList.add('toedit');
-//     }
-
-//     editme.classList.add('dropzone');
-
-
-//     aa.appendChild(editme);
 // }
 
 
