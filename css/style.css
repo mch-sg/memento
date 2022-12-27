@@ -339,14 +339,14 @@ i {
   translate3d( 0, 0, 0);
 
   margin-bottom: 5px;
+  /* margin-top: 5px; */
 
   vertical-align: middle;
   text-align: center;
 
-  /* border-radius: 10px; */
   transition: 0.2s;
 
-  cursor: pointer;
+  /*?  cursor: pointer; */
 }
 
 form ul li.draggable:active {
@@ -381,8 +381,8 @@ form ul li.completed:active {
   text-decoration: line-through;
 }
 
-label { /* CHANGED FOR TESTING (ADDED .primlist) */
-  /* padding-left: 1.25rem; /*  CHANGED FOR TESTING (COMMENTING) */
+label { /*  CHANGED FOR TESTING (ADDED .primlist) */
+  padding-left: 1.25rem; /*  CHANGED FOR TESTING (COMMENTING) */
 
   text-align: left;
   overflow: hidden;
@@ -390,7 +390,7 @@ label { /* CHANGED FOR TESTING (ADDED .primlist) */
   max-width: 100%; */
   font-smooth: always;
 
-  cursor: pointer;
+  /* ? cursor: pointer; */
 }
 
 span {
